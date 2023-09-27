@@ -17,7 +17,7 @@ LodashWrapper {
   __values__: undefined
 }
 */
-console.log(lodash(myNumArr));
+// console.log(lodash(myNumArr));
 
 // Array with duplicates removed but still in the same order
 /*
@@ -26,4 +26,9 @@ console.log(lodash(myNumArr));
   5, 6, 1000,   7
 ]
 */
+// _.uniq() method used instead of _.uniqby() since the task didn't require a greater the added complexity of
+// having an iteratee supplied
+// research for _.uniqby() learned from
+// Lodash _.uniqby() method (2021) GeeksforGeeks.
+// Available at: https://www.geeksforgeeks.org/lodash-_-uniqby-method/ (Accessed: 27 September 2023).
 console.log(lodash.uniq(myNumArr));
