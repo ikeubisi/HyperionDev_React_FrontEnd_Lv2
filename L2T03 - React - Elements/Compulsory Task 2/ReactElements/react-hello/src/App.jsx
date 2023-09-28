@@ -32,7 +32,9 @@ const userBobSmith = (
       <li>
         <a href={phone}>Call {user.telephone}</a>
       </li>
-      <li>Company: {user.company}</li>
+      <li>
+        Company: <span className="fw-bold">{user.company}</span>
+      </li>
     </ul>
 
     <img className="profile" src={user.profile_picture} alt={username} />
