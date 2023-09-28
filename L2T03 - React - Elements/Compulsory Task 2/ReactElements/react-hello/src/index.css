@@ -20,12 +20,17 @@ a:hover {
   color: hsl(59, 34%, 24%);
 }
 
-.profile {
-  box-shadow: var(--box-shadow-main);
-  padding: 5px;
-  border-radius: 5px;
+ol {
+  margin: auto;
+  max-width: 500px;
 }
 
 ul {
   list-style: none;
+}
+
+.profile {
+  box-shadow: var(--box-shadow-main);
+  padding: 5px;
+  border-radius: 5px;
 }

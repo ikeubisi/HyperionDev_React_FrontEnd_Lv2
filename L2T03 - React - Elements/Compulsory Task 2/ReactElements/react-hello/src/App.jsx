@@ -45,14 +45,15 @@ const userBobSmith = (
     </ul>
 
     <h2>Full user object output</h2>
-    <ul>
+    <p>Demo of Object.entries().map in action.</p>
+    <ol>
       {/* Object entries learned from MDN Webdocs
       https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries */}
       {/* key must be unique */}
       {Object.entries(user).map(([key, value]) => {
         return <li key={key}>{value}</li>;
       })}
-    </ul>
+    </ol>
   </div>
 );
 
