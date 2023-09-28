@@ -42,6 +42,9 @@ const userBobSmith = (
     <h3 className="mt-2">Shopping List</h3>
     <ul>
       {user.shopping_cart.map((item, index) => {
+        {
+          /* key must be unique */
+        }
         return <li key={index}>{item}</li>;
       })}
     </ul>
@@ -51,7 +54,6 @@ const userBobSmith = (
     <ol>
       {/* Object entries learned from MDN Webdocs
       https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries */}
-      {/* key must be unique */}
       {Object.entries(user).map(([key, value]) => {
         return <li key={key}>{value}</li>;
       })}
