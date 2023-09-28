@@ -22,7 +22,7 @@ const phone = "tel:" + user.telephone;
 const userBobSmith = (
   <div className="container">
     <h1>{username}</h1>
-    <h4>Born: {user.date_of_birth}</h4>
+    <h6>Born: {user.date_of_birth}</h6>
     <ul>
       <li>{user.address}</li>
       <li>{user.country}</li>
