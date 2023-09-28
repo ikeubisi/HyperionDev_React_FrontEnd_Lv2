@@ -49,7 +49,7 @@ const userBobSmith = (
       })}
     </ul>
 
-    <h2>Full user object output</h2>
+    <h2 className="mt-2">Full user object output</h2>
     <p>Demo of Object.entries().map in action.</p>
     <ol>
       {/* Object entries learned from MDN Webdocs
