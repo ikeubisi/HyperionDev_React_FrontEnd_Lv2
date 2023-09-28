@@ -16,20 +16,33 @@ const user = {
 };
 
 const username = user.name + " " + user.surname;
+const email = "mailto: " + user.email;
+const phone = "tel:" + user.telephone;
 
-const shoppingList = (
-  <div>
+const userBobSmith = (
+  <div className="container">
     <h1>{username}</h1>
     <h4>Born: {user.date_of_birth}</h4>
     <ul>
       <li>{user.address}</li>
       <li>{user.country}</li>
-      <li>{user.email}</li>
-      <li>{user.telephone}</li>
+      <li>
+        <a href={email}>Send Email</a>
+      </li>
+      <li>
+        <a href={phone}>Call {user.telephone}</a>
+      </li>
       <li>Company: {user.company}</li>
     </ul>
 
-    <img src={user.profile_picture} alt={username} />
+    <img className="profile" src={user.profile_picture} alt={username} />
+
+    <h3 className="mt-2">Shopping List</h3>
+    <ul>
+      {user.shopping_cart.map((item, index) => {
+        return <li key={index}>{item}</li>;
+      })}
+    </ul>
 
     <h2>Full user object output</h2>
     <ul>
@@ -46,7 +59,7 @@ const shoppingList = (
 function App() {
   const [count, setCount] = useState(0);
 
-  return <>{shoppingList}</>;
+  return <>{userBobSmith}</>;
 }
 
 export default App;
