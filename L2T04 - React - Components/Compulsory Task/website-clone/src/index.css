@@ -2,6 +2,31 @@ html {
     text-align: center;
 }
 
+a {
+    color: rgb(241, 241, 241);
+}
+
+button {
+    margin: 0px auto;
+    width: 377px;
+    border-radius: 48px;
+    padding: 17px 30px 19px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgb(255, 255, 255);
+    height: 58px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background: transparent;
+}
+
 body {
     margin: 0px auto;
     width: 100%;
@@ -51,4 +76,18 @@ p {
     -webkit-box-pack: justify;
     justify-content: space-between;
     min-height: 100%;
+}
+
+.button-disabled {
+    margin: 0px auto;
+    width: 377px;
+    border-radius: 48px;
+    padding: 17px 30px 19px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.24);
+    backdrop-filter: blur(16px);
 }

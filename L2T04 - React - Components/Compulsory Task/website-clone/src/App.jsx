@@ -11,7 +11,7 @@ function App() {
     <>
       <div className="background">
         <a href="https://talk.brave.com/" target="_blank">
-          <h1 className="p-5">Website Cloned</h1>
+          <h1 className="p-5">Website cloned - Brave Talk</h1>
         </a>
         <BraveLogo />
         <BraveTalk />
