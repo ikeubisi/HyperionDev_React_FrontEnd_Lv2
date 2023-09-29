@@ -41,11 +41,21 @@ footer {
     margin: 20px 0px 16px;
 }
 
-h2 {
+h1 {
     font-size: 36px;
     font-weight: 600;
     line-height: 60px;
     color: rgb(240, 242, 255);
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
 }
 
 h3 {
@@ -81,7 +91,16 @@ p {
 }
 
 #talk-logo {
-    background-image: url("../src/assets/brave-talk.svg");
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiBmaWxsPSJub25lIj48Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI2MCIgZmlsbD0iI2ZmZiIvPjxwYXRoIGZpbGw9InVybCgjYSkiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTk0LjI5MiA4NC42MjRhMi45NjIgMi45NjIgMCAwIDEtMy4wMzItLjE0NWwtMTMuMTIyLTguNzV2My4zNGE1LjkxIDUuOTEgMCAwIDEtNS45MDQgNS45MDRoLTQxLjMzQTUuOTEgNS45MSAwIDAgMSAyNSA3OS4wN1Y0MC42OWE1LjkxMSA1LjkxMSAwIDAgMSA1LjkwNC01LjkwNGg0MS4zM2E1LjkxMSA1LjkxMSAwIDAgMSA1LjkwNCA1LjkwNHYzLjM0M2wxMy4xMjItOC43NWEyLjk1IDIuOTUgMCAwIDEgNC41OTEgMi40NTV2NDQuMjgzYzAgMS4wOS0uNiAyLjA4Ny0xLjU1OSAyLjYwMlptLTQuMzQ1LTQxLjM2Ni0xMy4xMjIgOC43NDZjLS4wNzcuMDUtLjE2Ni4wNTctLjI0NS4xMDEtLjE3Ny4wOTgtLjM2LjE2OS0uNTYxLjIyOGEyLjg2MSAyLjg2MSAwIDAgMS0uNTYxLjExM2MtLjA5NS4wMDktLjE3Ny4wNTYtLjI3Mi4wNTYtLjEgMC0uMTg2LS4wNDctLjI4Ni0uMDZhMi42NjIgMi42NjIgMCAwIDEtLjU3LS4xMTUgMi44MDQgMi44MDQgMCAwIDEtLjUyMi0uMjEzIDIuODcgMi44NyAwIDAgMS0uODgtLjczMWMtLjA2LS4wNzQtLjE0NS0uMTE2LS4xOTgtLjE5Ni0uMDUtLjA3Ny0uMDU5LS4xNjgtLjEtLjI0OGEyLjcgMi43IDAgMCAxLS4yMjUtLjU0OGMtLjA1OS0uMTk2LS4xLS4zODItLjExOC0uNTc4LS4wMDktLjA5MS0uMDUzLS4xNzEtLjA1My0uMjYzdi04Ljg1OWgtNDEuMzN2MzguNDkxaDQxLjMzdi04Ljk2OGMwLS4wOTIuMDQ0LS4xNzIuMDUzLS4yNjRhMi43OCAyLjc4IDAgMCAxIC4xMTgtLjU3N2MuMDYtLjE5Ni4xMjctLjM3My4yMjUtLjU1LjA0MS0uMDguMDUtLjE3LjEtLjI0Ny4wNTMtLjA4LjEzOS0uMTI0LjItLjE5OC4xMjgtLjE1Ny4yNjMtLjI5My40MjMtLjQyNC4xNDgtLjExOC4yOTUtLjIyMS40NjMtLjMxYTIuODU3IDIuODU3IDAgMCAxIDEuMDk5LS4zMjZjLjA5NC0uMDEyLjE3NC0uMDU2LjI3MS0uMDU2LjA5MiAwIC4xNjguMDQ0LjI1Ny4wNTMuMi4wMTguMzkuMDU2LjU4NS4xMTUuMTk0LjA2LjM3NC4xMy41NDkuMjI4LjA4LjA0Mi4xNy4wNDguMjQ4LjEwMWwxMy4xMjIgOC43NDZWNDMuMjU4WiIgY2xpcC1ydWxlPSJldmVub2RkIi8+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iMjUiIHgyPSI4OS4wNzciIHkxPSIzNC43ODciIHkyPSI5Mi40OTUiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBzdG9wLWNvbG9yPSIjNEM1NEQyIi8+PHN0b3Agb2Zmc2V0PSIuNTYzIiBzdG9wLWNvbG9yPSIjQkYxNEEyIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjRjczQTFDIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PC9zdmc+");
+    z-index: 10;
+    --talk-logo-size: 122px;
+    background-size: var(--talk-logo-size) var(--talk-logo-size);
+    width: var(--talk-logo-size);
+    height: var(--talk-logo-size);
+    margin-top: calc(var(--talk-logo-size) / -2);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .background {

@@ -1,8 +1,8 @@
 export default function BraveTalk({ title }) {
   return (
     <div className="section-box">
-      <div id="talk-logo"></div>
-      <h2>{title}</h2>
+      {/* <div id="talk-logo"></div> */}
+      <h1>{title}</h1>
       <p id="intro" className="fw-600">
         Encrypted video calls. Right in your browser.
       </p>

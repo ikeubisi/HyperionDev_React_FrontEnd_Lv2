@@ -9,10 +9,13 @@ function App() {
   return (
     <div className="background-container">
       <div className="background">
-        <a href="https://talk.brave.com/" target="_blank">
-          <h1 className="p-5">Website cloned - Brave Talk</h1>
-        </a>
-
+        <div id="clone-link" className="mt-2">
+          <p>
+            <a href="https://talk.brave.com/" target="_blank">
+              Link to cloned site!{" "}
+            </a>
+          </p>
+        </div>
         <BraveLogo />
         <main>
           {/* demo props being passed down */}

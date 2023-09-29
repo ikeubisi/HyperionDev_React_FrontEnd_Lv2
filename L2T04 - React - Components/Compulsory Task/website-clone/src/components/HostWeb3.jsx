@@ -1,7 +1,7 @@
 export default function HostWeb3({ title }) {
   return (
     <div className="section-box">
-      <h3>{title}</h3>
+      <h2>{title}</h2>
       <p>
         Use NFTs and POAPs to token-gate access, configure avatars, assign
         moderators, and more.

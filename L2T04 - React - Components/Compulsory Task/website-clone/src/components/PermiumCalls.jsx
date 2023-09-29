@@ -1,7 +1,7 @@
 export default function PermiumCalls({ title }) {
   return (
     <div className="section-box">
-      <h3>{title}</h3>
+      <h2>{title}</h2>
       <p>
         Host video calls with hundreds of people, get moderator controls, and
         more.
