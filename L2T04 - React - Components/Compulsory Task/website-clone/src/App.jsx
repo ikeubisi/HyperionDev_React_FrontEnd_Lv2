@@ -9,15 +9,17 @@ import BraveLogo from "./components/BraveLogo";
 function App() {
   return (
     <>
-      <a href="https://talk.brave.com/" target="_blank">
-        <h1>Website Cloned</h1>
-      </a>
-      <BraveLogo />
-      <BraveTalk />
-      <PermiumCalls />
-      <HostWeb3 />
-      {/* demo props being passed down */}
-      <Footer policy={"privacy policy"} status={"Service status"} />
+      <div className="background">
+        <a href="https://talk.brave.com/" target="_blank">
+          <h1>Website Cloned</h1>
+        </a>
+        <BraveLogo />
+        <BraveTalk />
+        <PermiumCalls />
+        <HostWeb3 />
+        {/* demo props being passed down */}
+        <Footer policy={"privacy policy"} status={"Service status"} />
+      </div>
     </>
   );
 }

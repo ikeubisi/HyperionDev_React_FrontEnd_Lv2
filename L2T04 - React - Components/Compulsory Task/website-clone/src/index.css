@@ -1,4 +1,18 @@
+html {
+    text-align: center;
+}
+
 body {
+    margin: 0px auto;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: Poppins, "Open Sans Pro", Arial, sans-serif;
+    color: rgb(241, 241, 241);
+    overflow: hidden;
+}
+
+.background {
     background-image: url(../src/assets/background.svg);
     background-repeat: no-repeat;
     background-size: cover;
