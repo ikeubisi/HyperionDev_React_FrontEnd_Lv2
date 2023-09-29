@@ -7,9 +7,38 @@ body {
     width: 100%;
     font-size: 12px;
     font-weight: 400;
-    font-family: Poppins, "Open Sans Pro", Arial, sans-serif;
+    font-family: "Poppins", "Open Sans Pro", Arial, sans-serif;
     color: rgb(241, 241, 241);
     overflow: hidden;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 60px;
+    color: rgb(240, 242, 255);
+}
+
+h3 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+p {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+}
+
+#talk-logo {
+    background-image: url("../src/assets/brave-talk.svg");
+    background-color: red;
 }
 
 .background {
