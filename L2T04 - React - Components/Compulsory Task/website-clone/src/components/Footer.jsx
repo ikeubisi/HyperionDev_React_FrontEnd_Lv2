@@ -1,7 +1,7 @@
 // destruct the props so I don't need to use the word "props" as a param
 export default function Footer({ policy, status }) {
   return (
-    <div>
+    <footer>
       Download the
       <a
         href="https://chrome.google.com/webstore/detail/brave-talk-for-google-cal/nimfmkdcckklbkhjjkmbjfcpaiifgamg"
@@ -10,7 +10,7 @@ export default function Footer({ policy, status }) {
         {" "}
         Brave Talk extension for Google Calendar
       </a>
-      . Your personal info stays private while using Brave Talk, per our{" "}
+      .<br /> Your personal info stays private while using Brave Talk, per our{" "}
       <a
         href="https://brave.com/privacy/browser/#brave-talk-learn"
         target="_blank"
@@ -22,6 +22,6 @@ export default function Footer({ policy, status }) {
         {status}
       </a>
       .
-    </div>
+    </footer>
   );
 }
