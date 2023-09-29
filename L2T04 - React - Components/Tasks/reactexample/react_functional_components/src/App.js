@@ -2,6 +2,8 @@ import "./App.css";
 import Welcome from "./components/Welcome";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
+import LayoutExample from "./components/LayoutExample.js";
+import StackExample from "./components/StackExample";
 function App() {
   return (
     <div className="App">
@@ -23,6 +25,13 @@ function App() {
       <Button variant="success">a Bootstrap Success Button</Button>
       <hr />
       <Button variant="link">Link</Button>
+      <hr />
+      <hr />
+      {/* display the LayoutExample component */}
+      <LayoutExample />
+      <hr />
+      {/* display the StackExample component */}
+      <StackExample />
     </div>
   );
 }
