@@ -1,5 +1,7 @@
 // Import CSS files for styling purposes
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 // importing the Welcome Component
 import Welcome from "./components/Welcome";
 function App() {
