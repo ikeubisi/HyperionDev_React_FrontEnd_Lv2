@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-
+// Import CSS files for styling purposes
+import "./App.css";
+// importing the Welcome Component
+import Welcome from "./components/Welcome";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* Display an instance of the Welcome component
+passing a prop name="Joe Soap" */}
+      <Welcome name="Joe Soap" />
+      {/* Display a second instance of the Welcome component
+passing a prop name="John Smith" */}
+      <Welcome name="John Smith" />
     </div>
   );
 }
-
 export default App;
