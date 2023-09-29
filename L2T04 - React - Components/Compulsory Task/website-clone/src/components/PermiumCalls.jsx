@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function PermiumCalls({ title }) {
   return (
     <div className="section-box">
@@ -26,3 +28,7 @@ export default function PermiumCalls({ title }) {
     </div>
   );
 }
+
+PermiumCalls.propTypes = {
+  title: PropTypes.string.isRequired,
+};

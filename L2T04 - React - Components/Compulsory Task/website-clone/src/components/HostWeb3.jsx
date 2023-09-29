@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function HostWeb3({ title }) {
   return (
     <div className="section-box">
@@ -17,3 +19,7 @@ export default function HostWeb3({ title }) {
     </div>
   );
 }
+
+HostWeb3.propTypes = {
+  title: PropTypes.string.isRequired,
+};
