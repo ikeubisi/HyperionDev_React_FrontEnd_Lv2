@@ -2,7 +2,7 @@ import React from "react";
 
 export default function BraveLogo() {
   return (
-    <div>
+    <div id="brave-logo">
       <a href="https://brave.com/download/bravetalk" target="_blank">
         {" "}
         <img
