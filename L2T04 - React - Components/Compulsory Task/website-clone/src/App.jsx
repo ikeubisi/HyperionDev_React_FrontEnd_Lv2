@@ -14,9 +14,9 @@ function App() {
           <h1 className="p-5">Website cloned - Brave Talk</h1>
         </a>
         <BraveLogo />
-        <BraveTalk />
-        <PermiumCalls />
-        <HostWeb3 />
+        <BraveTalk title={"Brave Talk"} />
+        <PermiumCalls title={"Premium Calls"} />
+        <HostWeb3 title={"Host a Web3"} />
         {/* demo props being passed down */}
         <Footer policy={"privacy policy"} status={"Service status"} />
       </div>

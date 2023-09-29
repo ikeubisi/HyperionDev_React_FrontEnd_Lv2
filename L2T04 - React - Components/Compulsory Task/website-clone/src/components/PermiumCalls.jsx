@@ -1,8 +1,8 @@
-export default function PermiumCalls() {
+export default function PermiumCalls({ title }) {
   return (
     <div>
-      <h3>Premium calls</h3>Host video calls with hundreds of people, get
-      moderator controls, and more.{" "}
+      <h3>{title}</h3>Host video calls with hundreds of people, get moderator
+      controls, and more.{" "}
       <button>
         <a href="https://account.brave.com/plans/?intent=checkout&product=talk">
           Start free trial

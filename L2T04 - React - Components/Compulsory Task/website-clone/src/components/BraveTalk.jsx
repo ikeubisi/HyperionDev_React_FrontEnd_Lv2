@@ -1,8 +1,8 @@
-export default function BraveTalk() {
+export default function BraveTalk({ title }) {
   return (
     <div>
       <div id="talk-logo"></div>
-      <h2>Brave Talk</h2>Encrypted video calls. Right in your browser.{" "}
+      <h2>{title}</h2>Encrypted video calls. Right in your browser.{" "}
       <button className="button-disabled">
         Start free call (up to 4 people)
       </button>
