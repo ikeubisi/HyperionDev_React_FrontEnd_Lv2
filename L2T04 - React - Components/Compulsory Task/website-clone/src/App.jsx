@@ -12,7 +12,7 @@ function App() {
       <div className="background">
         <div id="clone-link" className="mt-2">
           <p>
-            <a href="https://talk.brave.com/" target="_blank">
+            <a href="https://talk.brave.com/" target="_blank" rel="noreferrer">
               Link to cloned site!{" "}
             </a>
           </p>
