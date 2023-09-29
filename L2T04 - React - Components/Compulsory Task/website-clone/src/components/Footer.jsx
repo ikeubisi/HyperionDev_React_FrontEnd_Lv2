@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 // destruct the props so I don't need to use the word "props" as a param
 export default function Footer({ policy, status }) {
   return (
@@ -25,3 +27,8 @@ export default function Footer({ policy, status }) {
     </footer>
   );
 }
+
+Footer.propTypes = {
+  policy: PropTypes.string.isRequired,
+  status: PropTypes.string.isRequired,
+};

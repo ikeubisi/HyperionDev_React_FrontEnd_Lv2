@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function BraveTalk({ title }) {
   return (
     <div className="section-box">
@@ -12,3 +14,7 @@ export default function BraveTalk({ title }) {
     </div>
   );
 }
+
+BraveTalk.propTypes = {
+  title: PropTypes.string.isRequired,
+};
