@@ -1,3 +1,4 @@
+// demo that react bootstrap was added
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./components/Footer";
 import BraveTalk from "./components/BraveTalk";
