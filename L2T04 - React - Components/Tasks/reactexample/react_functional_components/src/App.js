@@ -7,10 +7,11 @@ function App() {
     <div>
       {/* Display an instance of the Welcome component
 passing a prop name="Joe Soap" */}
-      <Welcome name="Joe Soap" />
+      <Welcome name="Joe Soap" age="39" />{" "}
       {/* Display a second instance of the Welcome component
 passing a prop name="John Smith" */}
-      <Welcome name="John Smith" />
+      <Welcome name="John Smith" age="52" />{" "}
+      <h1 style={{ backgroundColor: "lightblue" }}>Hello Style!</h1>
     </div>
   );
 }

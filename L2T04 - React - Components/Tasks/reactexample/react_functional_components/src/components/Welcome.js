@@ -6,7 +6,9 @@ function Welcome(props) {
     <div>
       {/* This h1 element uses JSX to display the name property of the props
 object */}
-      <h1>Hello World, {props.name}</h1>
+      <h1>
+        Hello World, {props.name} your age is {props.age}
+      </h1>
     </div>
   );
 }
