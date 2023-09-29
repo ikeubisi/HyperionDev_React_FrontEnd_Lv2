@@ -20,7 +20,10 @@ export default function PermiumCalls({ title }) {
       </p>
       <p>
         Already have Premium?{" "}
-        <a href="https://account.brave.com/account/?intent=recover&product=talk">
+        <a
+          href="https://account.brave.com/account/?intent=recover&product=talk"
+          aria-label="Log in"
+        >
           Log in
         </a>
         .

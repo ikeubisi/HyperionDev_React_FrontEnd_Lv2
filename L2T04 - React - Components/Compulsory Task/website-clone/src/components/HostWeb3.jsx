@@ -9,7 +9,10 @@ export default function HostWeb3({ title }) {
         moderators, and more.
       </p>
       <button className="mb-2">
-        <a href="https://account.brave.com/account/?intent=recover&product=talk"></a>
+        <a
+          href="https://account.brave.com/account/?intent=recover&product=talk"
+          aria-label="Sign up"
+        ></a>
         Sign up to host a Web3
       </button>
       <p>

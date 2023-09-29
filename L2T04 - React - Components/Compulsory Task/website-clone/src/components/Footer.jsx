@@ -9,6 +9,7 @@ export default function Footer({ policy, status }) {
         href="https://chrome.google.com/webstore/detail/brave-talk-for-google-cal/nimfmkdcckklbkhjjkmbjfcpaiifgamg"
         target="_blank"
         rel="noreferrer"
+        aria-label="Google Calendar extension"
       >
         {" "}
         Brave Talk extension for Google Calendar
@@ -18,11 +19,17 @@ export default function Footer({ policy, status }) {
         href="https://brave.com/privacy/browser/#brave-talk-learn"
         target="_blank"
         rel="noreferrer"
+        aria-label={policy}
       >
         {policy}
       </a>
       .{" "}
-      <a href="https://status.brave.com/" target="_blank" rel="noreferrer">
+      <a
+        href="https://status.brave.com/"
+        target="_blank"
+        rel="noreferrer"
+        aria-label={status}
+      >
         {status}
       </a>
       .
