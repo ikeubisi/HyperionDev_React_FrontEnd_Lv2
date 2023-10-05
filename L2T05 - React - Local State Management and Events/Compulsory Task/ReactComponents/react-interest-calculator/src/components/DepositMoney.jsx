@@ -1,6 +1,11 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 export default function DepositMoney({ balance }) {
+  DepositMoney.propTypes = {
+    balance: PropTypes.number.isRequired,
+  };
+
   const [deposit, setDeposit] = useState(0);
 
   function addMoney() {
