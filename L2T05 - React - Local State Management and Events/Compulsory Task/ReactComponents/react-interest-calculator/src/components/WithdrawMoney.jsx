@@ -1,16 +1,11 @@
-import { useState } from "react";
 import PropTypes from "prop-types";
 
-export default function WithdrawMoney({ balance }) {
+export default function WithdrawMoney({ balance, withdrawl, removeMoney }) {
   WithdrawMoney.propTypes = {
     balance: PropTypes.number.isRequired,
+    withdrawl: PropTypes.number.isRequired,
+    removeMoney: PropTypes.func.isRequired,
   };
-
-  const [withdrawl, setWithdrawl] = useState(0);
-
-  function removeMoney() {
-    setWithdrawl(withdrawl - 10);
-  }
 
   return (
     <div>
@@ -21,7 +16,7 @@ export default function WithdrawMoney({ balance }) {
         placeholder="Enter Withdrawl Amount"
       />
       <button onClick={removeMoney}>Withdraw Money</button>
-      <h3>Money Withdrawn: {balance + withdrawl}</h3>
+      <h3>Money Withdrawn: {balance - withdrawl}</h3>
     </div>
   );
 }

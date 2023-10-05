@@ -1,9 +1,8 @@
 import PropTypes from "prop-types";
 
-export default function DepositMoney({ balance, deposit, addMoney }) {
+export default function DepositMoney({ balance, addMoney }) {
   DepositMoney.propTypes = {
     balance: PropTypes.number.isRequired,
-    deposit: PropTypes.number.isRequired,
     addMoney: PropTypes.func.isRequired,
   };
 
@@ -16,7 +15,7 @@ export default function DepositMoney({ balance, deposit, addMoney }) {
         placeholder="Enter Deposit Amount"
       />
       <button onClick={addMoney}>Deposit Money</button>
-      <h3>Money Deposited: {balance + deposit}</h3>
+      <h3>Money Deposited: {balance}</h3>
     </div>
   );
 }
