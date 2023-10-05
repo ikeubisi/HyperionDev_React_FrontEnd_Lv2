@@ -8,7 +8,9 @@ export default function InterestRate({ addInterest }) {
   return (
     <div>
       <h2>Interest Rate</h2>
-      <button onClick={addInterest}>Add Interest rate of 5%</button>
+      <button onClick={addInterest} className="btn btn-secondary">
+        Add Interest rate of 5%
+      </button>
     </div>
   );
 }

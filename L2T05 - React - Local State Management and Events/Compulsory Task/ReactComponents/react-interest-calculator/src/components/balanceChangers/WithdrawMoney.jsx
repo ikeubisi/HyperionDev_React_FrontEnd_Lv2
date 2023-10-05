@@ -15,7 +15,9 @@ export default function WithdrawMoney({ removeMoney }) {
         defaultValue={0}
         className="m-2"
       />
-      <button onClick={removeMoney}>Withdraw Money</button>
+      <button onClick={removeMoney} className="btn btn-primary">
+        Withdraw Money
+      </button>
     </div>
   );
 }

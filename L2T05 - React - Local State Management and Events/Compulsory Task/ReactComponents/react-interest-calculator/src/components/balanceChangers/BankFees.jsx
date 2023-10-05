@@ -8,7 +8,9 @@ export default function BankFees({ chargeBankFees }) {
   return (
     <div>
       <h2>Bank Fees</h2>
-      <button onClick={chargeBankFees}>Charge Bank Fees of £10</button>
+      <button onClick={chargeBankFees} className="btn btn-secondary">
+        Charge Bank Fees of £10
+      </button>
     </div>
   );
 }

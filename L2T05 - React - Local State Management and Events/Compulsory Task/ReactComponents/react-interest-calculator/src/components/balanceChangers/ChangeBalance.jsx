@@ -15,7 +15,9 @@ export default function ChangeBalance({ changeBalance }) {
         placeholder="Enter a number"
         className="m-2"
       />
-      <button onClick={changeBalance}>Change Balance</button>
+      <button onClick={changeBalance} className="btn btn-success">
+        Change Balance
+      </button>
     </div>
   );
 }

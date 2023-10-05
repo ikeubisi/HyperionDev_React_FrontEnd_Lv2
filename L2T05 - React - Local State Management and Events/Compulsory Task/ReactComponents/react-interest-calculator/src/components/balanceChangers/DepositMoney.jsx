@@ -15,7 +15,9 @@ export default function DepositMoney({ addMoney }) {
         defaultValue={0}
         className="m-2"
       />
-      <button onClick={addMoney}>Deposit Money</button>
+      <button onClick={addMoney} className="btn btn-primary">
+        Deposit Money
+      </button>
     </div>
   );
 }
