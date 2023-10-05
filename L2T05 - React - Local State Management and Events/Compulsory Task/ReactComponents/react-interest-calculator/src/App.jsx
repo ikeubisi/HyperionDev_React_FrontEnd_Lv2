@@ -4,9 +4,9 @@ import DisplayMoney from "./components/DisplayMoney";
 
 function App() {
   return (
-    <>
+    <div className="container">
       <DisplayMoney />
-    </>
+    </div>
   );
 }
 
