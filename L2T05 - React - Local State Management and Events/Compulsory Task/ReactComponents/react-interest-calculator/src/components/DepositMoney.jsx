@@ -1,16 +1,16 @@
-export default function DepositMoney({ userMoney, depositMoney, moneyIn }) {
+import { useState } from "react";
+
+export default function DepositMoney({ balance }) {
+  const [deposit, setDeposit] = useState(0);
+
+  function addMoney() {
+    setDeposit(deposit + 200);
+  }
+
   return (
     <div>
-      <label htmlFor="depositInput">
-        Enter Deposit:
-        <input name="depositInput" type="number" />
-      </label>
-
-      <button onClick={(event) => depositMoney(event.target.value)}>
-        Increase Count
-      </button>
-
-      <h3>User Money : {userMoney}</h3>
+      <h3>Money Deposited: {balance + deposit}</h3>
+      <button onClick={addMoney}>Deposit Money</button>
     </div>
   );
 }
