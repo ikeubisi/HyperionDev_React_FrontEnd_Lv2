@@ -31,24 +31,30 @@ export default function DisplayMoney() {
 
     if (balance < 1) {
       alert("You have run out of money!");
+    } else {
+      setBalance((balance -= withdrawal));
     }
-
-    setBalance((balance -= withdrawal));
   }
 
   // Charge bank fees
   function chargeBankFees() {
     if (balance < 1) {
       alert("You have run out of money!");
+    } else {
+      setBalance((balance -= bankFees));
     }
-
-    setBalance((balance -= bankFees));
   }
 
   function changeBalance() {
-    setBalance(
-      (balance = parseInt(document.getElementById("changeBalanceAmount").value))
-    );
+    if (document.getElementById("changeBalanceAmount").value < 0) {
+      alert("You cannot change to a negative number!");
+    } else {
+      setBalance(
+        (balance = parseInt(
+          document.getElementById("changeBalanceAmount").value
+        ))
+      );
+    }
   }
 
   return (

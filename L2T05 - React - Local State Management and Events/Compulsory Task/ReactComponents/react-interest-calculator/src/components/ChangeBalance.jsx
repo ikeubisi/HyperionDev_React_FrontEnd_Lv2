@@ -12,7 +12,7 @@ export default function ChangeBalance({ changeBalance }) {
         type="number"
         min="0"
         id="changeBalanceAmount"
-        defaultValue={0}
+        placeholder="Enter a number"
         className="m-2"
       />
       <button onClick={changeBalance}>Change Balance</button>
