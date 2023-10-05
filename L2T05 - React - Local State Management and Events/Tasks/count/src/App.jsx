@@ -7,6 +7,9 @@ function App() {
     <div className="App">
       {/* Import the count component */}
       <Count />
+      <hr />
+      {/* Create a second instance of the count component */}
+      <Count />
     </div>
   );
 }
