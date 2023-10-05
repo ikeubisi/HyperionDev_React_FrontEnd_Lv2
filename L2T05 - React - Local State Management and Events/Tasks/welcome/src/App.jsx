@@ -8,7 +8,7 @@ function App() {
         passing 2 props
         name="Bob"
         age="39" */}
-      <Welcome name="Bob" age="39" />
+      <Welcome name="Bob" age={39} />
     </div>
   );
 }
