@@ -3,6 +3,7 @@ import DepositMoney from "./DepositMoney";
 import WithdrawMoney from "./WithdrawMoney";
 import InterestRate from "./InterestRate";
 import BankFees from "./BankFees";
+import ChangeBalance from "./ChangeBalance";
 
 export default function DisplayMoney() {
   let [balance, setBalance] = useState(100);
@@ -44,6 +45,12 @@ export default function DisplayMoney() {
     setBalance((balance -= bankFees));
   }
 
+  function changeBalance() {
+    setBalance(
+      (balance = parseInt(document.getElementById("changeBalanceAmount").value))
+    );
+  }
+
   return (
     <div>
       <h2>Current Balance £{parseFloat(balance.toFixed(2))}</h2>
@@ -55,6 +62,8 @@ export default function DisplayMoney() {
       <WithdrawMoney balance={balance} removeMoney={removeMoney} />
       <hr />
       <BankFees balance={balance} chargeBankFees={chargeBankFees} />
+      <hr />
+      <ChangeBalance balance={balance} changeBalance={changeBalance} />
     </div>
   );
 }
