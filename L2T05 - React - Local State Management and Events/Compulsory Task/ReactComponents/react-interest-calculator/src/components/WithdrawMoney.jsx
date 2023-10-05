@@ -11,7 +11,6 @@ export default function WithdrawMoney({ balance, removeMoney }) {
       <h2>Withdraw</h2>
       <input type="number" id="withdrawAmount" defaultValue={0} />
       <button onClick={removeMoney}>Withdraw Money</button>
-      <h3>Money Withdrawn: {balance}</h3>
     </div>
   );
 }
