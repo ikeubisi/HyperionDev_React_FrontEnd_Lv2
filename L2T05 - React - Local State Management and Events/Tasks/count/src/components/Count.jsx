@@ -1,11 +1,11 @@
+import { useState } from "react";
+
 export default function Count() {
-  // Event handler for the onClick event
+  const [count, setCount] = useState(0);
+
   function increaseCount() {
-    count += count;
-    console.log("Event Triggered");
+    setCount(count + 1);
   }
-  // Create a variable called “count” and set the initial value to 0
-  let count = 0;
   return (
     <div>
       {/* use JSX code to display the value of the count variable */}
