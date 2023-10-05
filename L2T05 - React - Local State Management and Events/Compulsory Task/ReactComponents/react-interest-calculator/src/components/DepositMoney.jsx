@@ -4,7 +4,7 @@ export default function DepositMoney({ balance }) {
   const [deposit, setDeposit] = useState(0);
 
   function addMoney() {
-    setDeposit(deposit + 200);
+    setDeposit(deposit + 10);
   }
 
   return (
