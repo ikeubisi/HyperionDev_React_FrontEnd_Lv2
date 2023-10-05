@@ -8,7 +8,9 @@ function App() {
   return (
     <div className="container">
       <DisplayMoney />
+      <hr />
       <DepositMoney balance={1000} />
+      <hr />
       <WithdrawMoney balance={5000} />
     </div>
   );

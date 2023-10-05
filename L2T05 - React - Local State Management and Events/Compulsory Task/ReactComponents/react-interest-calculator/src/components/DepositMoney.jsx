@@ -16,9 +16,14 @@ export default function DepositMoney({ balance }) {
 
   return (
     <div>
-      <h3>Money Deposited: {balance + deposit}</h3>
-      <input type="number" id="depositAmount" />
+      <h2>Deposit</h2>
+      <input
+        type="number"
+        id="depositAmount"
+        placeholder="Enter Deposit Amount"
+      />
       <button onClick={addMoney}>Deposit Money</button>
+      <h3>Money Deposited: {balance + deposit}</h3>
     </div>
   );
 }
