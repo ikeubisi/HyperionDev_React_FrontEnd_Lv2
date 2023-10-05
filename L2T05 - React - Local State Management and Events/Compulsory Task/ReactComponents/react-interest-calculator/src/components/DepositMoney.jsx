@@ -8,7 +8,13 @@ export default function DepositMoney({ addMoney }) {
   return (
     <div>
       <h2>Deposit</h2>
-      <input type="number" id="depositAmount" defaultValue={0} />
+      <input
+        type="number"
+        min="0"
+        id="depositAmount"
+        defaultValue={0}
+        className="m-2"
+      />
       <button onClick={addMoney}>Deposit Money</button>
     </div>
   );

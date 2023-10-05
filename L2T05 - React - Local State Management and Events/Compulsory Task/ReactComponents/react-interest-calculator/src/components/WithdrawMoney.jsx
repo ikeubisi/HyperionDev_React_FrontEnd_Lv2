@@ -8,7 +8,13 @@ export default function WithdrawMoney({ removeMoney }) {
   return (
     <div>
       <h2>Withdraw</h2>
-      <input type="number" id="withdrawAmount" defaultValue={0} />
+      <input
+        type="number"
+        min="0"
+        id="withdrawAmount"
+        defaultValue={0}
+        className="m-2"
+      />
       <button onClick={removeMoney}>Withdraw Money</button>
     </div>
   );
