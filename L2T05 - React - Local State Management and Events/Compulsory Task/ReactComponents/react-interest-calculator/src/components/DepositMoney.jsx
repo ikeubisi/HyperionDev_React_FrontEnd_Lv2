@@ -1,8 +1,7 @@
 import PropTypes from "prop-types";
 
-export default function DepositMoney({ balance, addMoney }) {
+export default function DepositMoney({ addMoney }) {
   DepositMoney.propTypes = {
-    balance: PropTypes.number.isRequired,
     addMoney: PropTypes.func.isRequired,
   };
 

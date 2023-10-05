@@ -1,8 +1,7 @@
 import PropTypes from "prop-types";
 
-export default function WithdrawMoney({ balance, removeMoney }) {
+export default function WithdrawMoney({ removeMoney }) {
   WithdrawMoney.propTypes = {
-    balance: PropTypes.number.isRequired,
     removeMoney: PropTypes.func.isRequired,
   };
 
