@@ -9,7 +9,7 @@ export default function DisplayMoney() {
   let moneyOut = 0;
 
   function depositMoney(moneyIn) {
-    userMoney += moneyIn;
+    userMoney += Number(moneyIn);
 
     setUserMoney(userMoney);
   }
@@ -23,7 +23,11 @@ export default function DisplayMoney() {
   return (
     <div>
       <p>Current user money {userMoney}</p>
-      <DepositMoney userMoney={userMoney} depositMoney={depositMoney} />
+      <DepositMoney
+        userMoney={userMoney}
+        depositMoney={depositMoney}
+        moneyIn={moneyIn}
+      />
       <WithdrawMoney userMoney={userMoney} withdrawMoney={withdrawMoney} />
     </div>
   );
