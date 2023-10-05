@@ -9,6 +9,7 @@ export default function DisplayMoney() {
 
   let deposit = 0;
   let withdrawal = 0;
+  // use fixed values for bank fees and interest rates
   const interest = 0.05;
   const bankFees = 10;
 
