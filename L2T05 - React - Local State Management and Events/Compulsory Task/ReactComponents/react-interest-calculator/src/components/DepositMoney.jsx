@@ -9,12 +9,15 @@ export default function DepositMoney({ balance }) {
   const [deposit, setDeposit] = useState(0);
 
   function addMoney() {
-    setDeposit(deposit + 10);
+    setDeposit(
+      deposit + parseInt(document.getElementById("depositAmount").value)
+    );
   }
 
   return (
     <div>
       <h3>Money Deposited: {balance + deposit}</h3>
+      <input type="number" id="depositAmount" />
       <button onClick={addMoney}>Deposit Money</button>
     </div>
   );
