@@ -18,7 +18,7 @@ export default function DisplayMoney() {
 
   // Deposit money
   function addMoney() {
-    deposit = parseInt(document.getElementById("depositAmount").value);
+    deposit = parseFloat(document.getElementById("depositAmount").value);
     setBalance((balance += deposit));
   }
 
@@ -29,7 +29,7 @@ export default function DisplayMoney() {
 
   // Withdraw money
   function removeMoney() {
-    withdrawal = parseInt(document.getElementById("withdrawAmount").value);
+    withdrawal = parseFloat(document.getElementById("withdrawAmount").value);
 
     if (balance < 1) {
       alert("You have run out of money!");
@@ -53,7 +53,7 @@ export default function DisplayMoney() {
       alert("You cannot change to a negative number!");
     } else {
       setBalance(
-        (balance = parseInt(
+        (balance = parseFloat(
           document.getElementById("changeBalanceAmount").value
         ))
       );
