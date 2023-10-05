@@ -9,8 +9,11 @@ export default function NameInput({ name, handleChange }) {
   return (
     <div>
       <label htmlFor="nameInput">
+        {/* Input component using onChange to update the value of the state */}
         Enter Name:
         <input
+          // The onChange event calls the handleChange function
+          // that was passed for the parent component as a prop
           onChange={(event) => handleChange(event.target.value)}
           name="nameInput"
           defaultValue="Enter name here"
