@@ -8,6 +8,7 @@ export default function DisplayMoney() {
   const [deposit, setDeposit] = useState(0);
   const [withdrawal, setWithdrawal] = useState(0);
 
+  // Deposit money
   function addMoney() {
     setDeposit(
       deposit + parseInt(document.getElementById("depositAmount").value)
@@ -16,9 +17,10 @@ export default function DisplayMoney() {
     setBalance((balance += deposit));
   }
 
+  // Withdraw money
   function removeMoney() {
     setWithdrawal(
-      withdrawal + parseInt(document.getElementById("depositAmount").value)
+      withdrawal + parseInt(document.getElementById("withdrawAmount").value)
     );
 
     if (balance < 1) {
@@ -30,6 +32,8 @@ export default function DisplayMoney() {
 
   return (
     <div>
+      <h2>Current Balance £{balance}</h2>
+      <hr />
       <DepositMoney balance={balance} addMoney={addMoney} />
       <hr />
       <WithdrawMoney balance={balance} removeMoney={removeMoney} />
