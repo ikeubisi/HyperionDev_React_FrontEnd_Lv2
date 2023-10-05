@@ -1,9 +1,8 @@
 import PropTypes from "prop-types";
 
-export default function WithdrawMoney({ balance, withdrawl, removeMoney }) {
+export default function WithdrawMoney({ balance, removeMoney }) {
   WithdrawMoney.propTypes = {
     balance: PropTypes.number.isRequired,
-    withdrawl: PropTypes.number.isRequired,
     removeMoney: PropTypes.func.isRequired,
   };
 
@@ -13,10 +12,10 @@ export default function WithdrawMoney({ balance, withdrawl, removeMoney }) {
       <input
         type="number"
         id="depositAmount"
-        placeholder="Enter Withdrawl Amount"
+        placeholder="Enter Withdrawal Amount"
       />
       <button onClick={removeMoney}>Withdraw Money</button>
-      <h3>Money Withdrawn: {balance - withdrawl}</h3>
+      <h3>Money Withdrawn: {balance}</h3>
     </div>
   );
 }
