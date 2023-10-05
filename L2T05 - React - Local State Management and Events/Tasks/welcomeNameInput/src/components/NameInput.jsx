@@ -16,7 +16,6 @@ export default function NameInput({ name, handleChange }) {
           // that was passed for the parent component as a prop
           onChange={(event) => handleChange(event.target.value)}
           name="nameInput"
-          defaultValue="Enter name here"
           value={name}
         />
       </label>
