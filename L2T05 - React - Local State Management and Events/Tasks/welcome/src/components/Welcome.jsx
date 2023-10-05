@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 
-function Welcome(props) {
+function Welcome({ name, age }) {
   // An event handler function that displays a message in the console
   const displayAge = () => {
-    console.log(props.age);
+    console.log(age);
   };
 
   // An event handler function that changes the background color of the web page
@@ -17,7 +17,7 @@ function Welcome(props) {
   return (
     <div>
       {/* Display the name value of the props object */}
-      <h1>Hello World, {props.name}</h1>
+      <h1>Hello World, {name}</h1>
       {/* This button will call the displayAge function when clicked */}
       <button onClick={displayAge}>Display The User Age</button>
       {/* This button will call the changeBackgroundColor function when
