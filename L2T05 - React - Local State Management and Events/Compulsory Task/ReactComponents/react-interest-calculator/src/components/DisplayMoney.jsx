@@ -6,16 +6,13 @@ import InterestRate from "./InterestRate";
 export default function DisplayMoney() {
   let [balance, setBalance] = useState(100);
 
-  const [deposit, setDeposit] = useState(0);
+  let deposit = 0;
+  let withdrawal = 0;
   const interest = 0.05;
-  const [withdrawal, setWithdrawal] = useState(0);
 
   // Deposit money
   function addMoney() {
-    setDeposit(
-      deposit + parseInt(document.getElementById("depositAmount").value)
-    );
-
+    deposit = parseInt(document.getElementById("depositAmount").value);
     setBalance((balance += deposit));
   }
 
@@ -26,9 +23,7 @@ export default function DisplayMoney() {
 
   // Withdraw money
   function removeMoney() {
-    setWithdrawal(
-      withdrawal + parseInt(document.getElementById("withdrawAmount").value)
-    );
+    withdrawal = parseInt(document.getElementById("withdrawAmount").value);
 
     if (balance < 1) {
       alert("You have run out of money!");
