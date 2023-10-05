@@ -11,7 +11,7 @@ export default function Welcome({ name }) {
   return (
     <div>
       {/* Input component using onChange to update the value of the state */}
-      <label htmlFor="">
+      <label>
         Enter Name:
         <input
           // The onChange event calls the handleChange function

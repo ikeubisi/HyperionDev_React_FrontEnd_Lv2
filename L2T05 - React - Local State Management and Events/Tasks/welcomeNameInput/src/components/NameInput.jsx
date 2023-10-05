@@ -1,20 +1,24 @@
-import { useState } from "react";
+import PropTypes from "prop-types";
 
-export default function NameInput() {
-  // Create name state object with a default value
-  const [userName, setUserName] = useState("");
+export default function NameInput({ name, handleChange }) {
+  NameInput.propTypes = {
+    name: PropTypes.string.isRequired,
+    handleChange: PropTypes.func.isRequired,
+  };
 
   return (
     <div>
-      <label htmlFor="nameInput">Enter Name: </label>
-      <input
-        onChange={(event) => setUserName(event.target.value)}
-        id="nameInput"
-        placeholder="Enter name here"
-        defaultValue={userName}
-      />
+      <label htmlFor="nameInput">
+        Enter Name:
+        <input
+          onChange={(event) => handleChange(event.target.value)}
+          name="nameInput"
+          defaultValue="Enter name here"
+          value={name}
+        />
+      </label>
       {/* Display the value of the userName state variable */}
-      <h3>Name : {userName}</h3>
+      <h3>Name : {name}</h3>
     </div>
   );
 }
