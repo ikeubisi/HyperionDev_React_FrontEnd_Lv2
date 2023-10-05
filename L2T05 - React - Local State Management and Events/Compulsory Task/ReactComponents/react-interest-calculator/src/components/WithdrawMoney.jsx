@@ -1,10 +1,15 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 export default function WithdrawMoney({ balance }) {
-  const [withdrawl, setDeposit] = useState(0);
+  WithdrawMoney.propTypes = {
+    balance: PropTypes.number.isRequired,
+  };
+
+  const [withdrawl, setWithdrawl] = useState(0);
 
   function removeMoney() {
-    setDeposit(withdrawl - 10);
+    setWithdrawl(withdrawl - 10);
   }
 
   return (
