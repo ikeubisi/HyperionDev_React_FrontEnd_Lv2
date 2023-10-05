@@ -1,16 +1,18 @@
 import { useState } from "react";
-import DepositMoney from "./DepositMoney";
-import WithdrawMoney from "./WithdrawMoney";
-import InterestRate from "./InterestRate";
-import BankFees from "./BankFees";
-import ChangeBalance from "./ChangeBalance";
+import DepositMoney from "./balanceChangers/DepositMoney";
+import WithdrawMoney from "./balanceChangers/WithdrawMoney";
+import InterestRate from "./balanceChangers/InterestRate";
+import BankFees from "./balanceChangers/BankFees";
+import ChangeBalance from "./balanceChangers/ChangeBalance";
 
+// Parent component
 export default function DisplayMoney() {
+  // Balance is shared by child components
   let [balance, setBalance] = useState(100);
 
   let deposit = 0;
   let withdrawal = 0;
-  // use fixed values for bank fees and interest rates
+  // Use fixed values for bank fees and interest rates
   const interest = 0.05;
   const bankFees = 10;
 
@@ -45,6 +47,7 @@ export default function DisplayMoney() {
     }
   }
 
+  // Allow user to change balance
   function changeBalance() {
     if (document.getElementById("changeBalanceAmount").value < 0) {
       alert("You cannot change to a negative number!");
