@@ -3,7 +3,7 @@ import DepositMoney from "./DepositMoney";
 import WithdrawMoney from "./WithdrawMoney";
 
 export default function DisplayMoney() {
-  const [userMoney, setUserMoney] = useState(1000);
+  const [userMoney, setUserMoney] = useState(0);
 
   let moneyIn = 0;
   let moneyOut = 0;
