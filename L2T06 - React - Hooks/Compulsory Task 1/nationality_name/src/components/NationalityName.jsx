@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import FetchCountryId from "./FetchCountryId";
 
 export default function NationalityName() {
-  const [username, setUsername] = useState("john");
+  const [username, setUsername] = useState("Neil");
   const inputRef = useRef();
 
   // Input focus on mount
@@ -17,9 +17,12 @@ export default function NationalityName() {
         value={username}
         onChange={(e) => setUsername(e.target.value)}
       />
-      <button onClick={() => FetchCountryId({ username })}>
+
+      {/* Button rendered obsolete since names can be dynamically fetched as user types */}
+      {/* <button onClick={() => FetchCountryId({ username })}>
         Fetch most likely country
-      </button>
+      </button> */}
+
       {/* FetchCountryId is a function component so must be passed as a prop rather than as a regular hook or normal function */}
       <h1>Most likely country for that name: {FetchCountryId({ username })}</h1>
     </div>
