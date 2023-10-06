@@ -17,8 +17,11 @@ export default function NationalityName() {
         value={username}
         onChange={(e) => setUsername(e.target.value)}
       />
-      <button onClick={FetchCountryId}>Fetch most likely country</button>
-      <h1>Most likely country for that name: {FetchCountryId("John")}</h1>
+      <button onClick={() => FetchCountryId({ username })}>
+        Fetch most likely country
+      </button>
+      {/* FetchCountryId is a function component so must be passed as a prop rather than as a regular hook or normal function */}
+      <h1>Most likely country for that name: {FetchCountryId({ username })}</h1>
     </div>
   );
 }
