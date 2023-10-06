@@ -14,14 +14,20 @@ export default function NationalityName() {
     <div>
       <input
         ref={inputRef}
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
+        defaultValue={username}
+        id="userInputField"
+        // Pay attention to what the user types in the input field & any changes
+        // onChange={(e) => setUsername(e.target.value)}
       />
 
       {/* Button rendered obsolete since names can be dynamically fetched as user types */}
-      {/* <button onClick={() => FetchCountryId({ username })}>
+      <button
+        onClick={() =>
+          setUsername(document.getElementById("userInputField").value)
+        }
+      >
         Fetch most likely country
-      </button> */}
+      </button>
 
       {/* FetchCountryId is a function component so must be passed as a prop rather than as a regular hook or normal function */}
       <h1>Most likely country for that name: {FetchCountryId({ username })}</h1>

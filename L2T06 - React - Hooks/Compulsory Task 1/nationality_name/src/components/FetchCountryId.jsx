@@ -16,17 +16,19 @@ export default function FetchCountryId({ username }) {
         // Intl.DisplayNames learned from
         // How to get country name from country code in javascript, Stack Overflow.
         // Available at: https://stackoverflow.com/questions/62028827/how-to-get-country-name-from-country-code-in-javascript (Accessed: 06 October 2023).
-
         let regionNames = new Intl.DisplayNames(["en"], { type: "region" });
         let countryName = regionNames.of(firstCountryId);
 
-        console.log(countryName);
         setNationality(countryName);
       } catch (error) {
         console.error(error);
       }
     }
-    fetchData();
+
+    // Don't waste time with a fetch request if no username has been supplied.
+    if (username.length > 0) {
+      fetchData();
+    }
   }, [siteUrl, username]);
 
   return nationality;
