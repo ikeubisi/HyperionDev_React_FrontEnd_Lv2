@@ -24,10 +24,15 @@ export default function FetchWeather({ city }) {
     wind_kph: 0,
   });
 
+  const [loading, setLoading] = useState(false);
+
   // Fetch API
   useEffect(() => {
     async function fetchData() {
       try {
+        // Set loading state to true
+        setLoading(true);
+
         const response = await fetch(siteUrl);
         const data = await response.json();
         const region = data.location.region;
@@ -40,6 +45,9 @@ export default function FetchWeather({ city }) {
         setWeatherData({ region, text, precip_mm, cloud, temp_c, wind_kph });
       } catch (error) {
         console.error(error);
+      } finally {
+        // Set loading state to false
+        setLoading(false);
       }
     }
 
@@ -50,7 +58,9 @@ export default function FetchWeather({ city }) {
     // Don't do anything unless we have a siteUrl and a city
   }, [siteUrl, city]);
 
-  return (
+  return loading ? (
+    <div>Loading ...</div>
+  ) : (
     <>
       <h3>Region: {weatherData.region}</h3>
       <h4>Summary: {weatherData.text}</h4>

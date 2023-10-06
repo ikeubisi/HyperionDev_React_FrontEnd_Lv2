@@ -8,11 +8,14 @@ FetchCountryId.propTypes = {
 export default function FetchCountryId({ username }) {
   const siteUrl = "https://api.nationalize.io?name=";
   const [nationality, setNationality] = useState("");
+  const [loading, setLoading] = useState(false);
 
   // Fetch API
   useEffect(() => {
     async function fetchData() {
       try {
+        // Set loading state to true
+        setLoading(true);
         const response = await fetch(siteUrl + username);
         const data = await response.json();
         // Get the first country id from the array
@@ -27,6 +30,9 @@ export default function FetchCountryId({ username }) {
         setNationality(countryName);
       } catch (error) {
         console.error(error);
+      } finally {
+        // Set loading state to false
+        setLoading(false);
       }
     }
 
@@ -37,5 +43,5 @@ export default function FetchCountryId({ username }) {
     // Don't do anything unless we have a siteUrl and a username
   }, [siteUrl, username]);
 
-  return nationality;
+  return loading ? "Loading ..." : nationality;
 }
