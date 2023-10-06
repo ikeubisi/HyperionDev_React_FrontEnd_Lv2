@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import FetchCountryId from "./FetchCountryId";
 
 export default function NationalityName() {
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = useState("john");
   const inputRef = useRef();
 
   // Input focus on mount
@@ -18,7 +18,7 @@ export default function NationalityName() {
         onChange={(e) => setUsername(e.target.value)}
       />
       <button onClick={FetchCountryId}>Fetch the most likely Country ID</button>
-      <h1>First Country ID: {FetchCountryId()}</h1>
+      <h1>First Country ID: {FetchCountryId("John")}</h1>
     </div>
   );
 }

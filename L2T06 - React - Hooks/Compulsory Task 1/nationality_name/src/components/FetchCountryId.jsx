@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 
-export default function FetchCountryId() {
+export default function FetchCountryId({ username }) {
   const [nationality, setNationality] = useState("");
-  const siteUrl = "https://api.nationalize.io?name=michael";
+  const siteUrl = "https://api.nationalize.io?name=";
 
   // Fetch API
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch(siteUrl);
+        const response = await fetch(siteUrl + username);
         const data = await response.json();
         const firstCountryId = data.country[0].country_id;
         console.log(firstCountryId);
@@ -18,7 +18,7 @@ export default function FetchCountryId() {
       }
     }
     fetchData();
-  }, [siteUrl]);
+  }, [siteUrl, username]);
 
   return nationality;
 }
