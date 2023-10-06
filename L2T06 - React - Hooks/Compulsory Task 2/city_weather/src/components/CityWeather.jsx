@@ -23,7 +23,7 @@ export default function CityWeather() {
       </button>
       {/* FetchWeather is a function component so must be passed as a prop rather than as a regular hook or normal function */}
       <h2>Weather for {city} </h2>
-      <p> {FetchWeather({ city })}</p>
+      <div> {FetchWeather({ city })}</div>
     </div>
   );
 }

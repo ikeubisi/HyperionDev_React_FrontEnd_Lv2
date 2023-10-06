@@ -16,12 +16,13 @@ export default function FetchWeather({ city }) {
   let siteUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no&tides=no`;
 
   // Weather data we'll get from the API
-  const [region, setRegion] = useState("");
-  const [text, setText] = useState("");
-  const [precip_mm, setPrecip] = useState(0);
-  const [cloud, setCloud] = useState(0);
-  const [temp_c, setTemp_c] = useState(0);
-  const [wind_kph, setWind_kph] = useState(0);
+  const [weatherData, setWeatherData] = useState({
+    region: "",
+    text: "",
+    precip_mm: 0,
+    temp_c: 0,
+    wind_kph: 0,
+  });
 
   // Fetch API
   useEffect(() => {
@@ -36,12 +37,7 @@ export default function FetchWeather({ city }) {
         const temp_c = data.current.temp_c;
         const wind_kph = data.current.wind_kph;
 
-        setRegion(region);
-        setText(text);
-        setPrecip(precip_mm);
-        setCloud(cloud);
-        setTemp_c(temp_c);
-        setWind_kph(wind_kph);
+        setWeatherData({ region, text, precip_mm, cloud, temp_c, wind_kph });
       } catch (error) {
         console.error(error);
       }
@@ -56,13 +52,13 @@ export default function FetchWeather({ city }) {
 
   return (
     <>
-      <h3>Region: {region}</h3>
-      <h4>Summary: {text}</h4>
+      <h3>Region: {weatherData.region}</h3>
+      <h4>Summary: {weatherData.text}</h4>
       <ul>
-        <li>Temperature is {temp_c} Celsius</li>
-        <li>Precipitation is {precip_mm}mm</li>
-        <li>Cloud level is at {cloud}</li>
-        <li>Wind is at {wind_kph}kph</li>
+        <li>Temperature is {weatherData.temp_c} Celsius</li>
+        <li>Precipitation is {weatherData.precip_mm}mm</li>
+        <li>Cloud level is at {weatherData.cloud}</li>
+        <li>Wind is at {weatherData.wind_kph}kph</li>
       </ul>
     </>
   );
