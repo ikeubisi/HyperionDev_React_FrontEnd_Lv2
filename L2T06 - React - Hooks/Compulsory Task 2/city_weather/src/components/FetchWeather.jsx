@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
-export default function FetchWeather({ city }) {
-  FetchWeather.propTypes = {
-    city: PropTypes.string.isRequired,
-  };
+FetchWeather.propTypes = {
+  city: PropTypes.string.isRequired,
+};
 
+export default function FetchWeather({ city }) {
   // Learned to import API Key in Vite from
   // How to create env variables in react (2023) YouTube.
   // Available at: https://www.youtube.com/shorts/r92aHr752Bg (Accessed: 06 October 2023).
