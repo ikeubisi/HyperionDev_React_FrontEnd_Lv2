@@ -1,7 +1,12 @@
 import "./App.css";
+import CityWeather from "./components/CityWeather";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <CityWeather />
+    </>
+  );
 }
 
 export default App;
