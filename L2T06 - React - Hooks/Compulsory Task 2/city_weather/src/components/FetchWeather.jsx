@@ -1,13 +1,15 @@
 import { useEffect } from "react";
 
 export default function FetchWeather({ city }) {
-  const siteUrl = "https://api.nationalize.io?name=";
+  const apiKey = "";
+
+  let siteUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`;
 
   // Fetch API
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch(siteUrl + city);
+        const response = await fetch(siteUrl);
         const data = await response.json();
         console.log(data);
       } catch (error) {
