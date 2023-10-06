@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
-export default function FetchCountryId({ username }) {
-  FetchCountryId.propTypes = {
-    username: PropTypes.string.isRequired,
-  };
+FetchCountryId.propTypes = {
+  username: PropTypes.string.isRequired,
+};
 
+export default function FetchCountryId({ username }) {
   const siteUrl = "https://api.nationalize.io?name=";
   const [nationality, setNationality] = useState("");
 
