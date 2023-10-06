@@ -10,6 +10,11 @@ export default function NationalityName() {
     inputRef.current.focus();
   }, []);
 
+  const handleBtnClick = () => {
+    // target the input field that uses useRef
+    setUsername(inputRef.current.value);
+  };
+
   return (
     <div>
       <h1>Country & Name</h1>
@@ -24,13 +29,7 @@ export default function NationalityName() {
       />
 
       {/* Change the username once the input field has been filled and the button clicked */}
-      <button
-        onClick={() =>
-          setUsername(document.getElementById("userInputField").value)
-        }
-      >
-        Fetch most likely country
-      </button>
+      <button onClick={handleBtnClick}>Fetch most likely country</button>
 
       {/* FetchCountryId is a function component so must be passed as a prop rather than as a regular hook or normal function */}
       <p>
