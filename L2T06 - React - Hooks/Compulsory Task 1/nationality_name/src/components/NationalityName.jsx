@@ -12,6 +12,8 @@ export default function NationalityName() {
 
   return (
     <div>
+      <h1>Country & Name</h1>
+      <p>Enter a name & get the most likely country for it.</p>
       <input
         ref={inputRef}
         defaultValue={username}
@@ -31,7 +33,10 @@ export default function NationalityName() {
       </button>
 
       {/* FetchCountryId is a function component so must be passed as a prop rather than as a regular hook or normal function */}
-      <h1>Most likely country for that name: {FetchCountryId({ username })}</h1>
+      <p>
+        Most likely country for that name:{" "}
+        <span id="countryName">{FetchCountryId({ username })}</span>
+      </p>
     </div>
   );
 }
