@@ -29,6 +29,7 @@ export default function FetchCountryId({ username }) {
     if (username.length > 0) {
       fetchData();
     }
+    // Don't do anything unless we have a siteUrl and a username
   }, [siteUrl, username]);
 
   return nationality;

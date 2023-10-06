@@ -16,11 +16,12 @@ export default function NationalityName() {
         ref={inputRef}
         defaultValue={username}
         id="userInputField"
+        // Alternate solution to using the Button if I wanted the app to be more dynamic as the user types
         // Pay attention to what the user types in the input field & any changes
         // onChange={(e) => setUsername(e.target.value)}
       />
 
-      {/* Button rendered obsolete since names can be dynamically fetched as user types */}
+      {/* Change the username once the input field has been filled and the button clicked */}
       <button
         onClick={() =>
           setUsername(document.getElementById("userInputField").value)
