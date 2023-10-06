@@ -11,7 +11,9 @@ export default function FetchWeather({ city }) {
   // Available at: https://www.youtube.com/shorts/r92aHr752Bg (Accessed: 06 October 2023).
   const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
 
-  let siteUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`;
+  // aqi=no means disable air quality info
+  // tides=no means disable Marine API output
+  let siteUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no&tides=no`;
 
   // Weather data we'll get from the API
   const [region, setRegion] = useState("");
