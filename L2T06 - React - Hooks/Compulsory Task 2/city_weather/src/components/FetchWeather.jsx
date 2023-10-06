@@ -13,6 +13,7 @@ export default function FetchWeather({ city }) {
 
   let siteUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`;
 
+  // Weather data we'll get from the API
   const [region, setRegion] = useState("");
   const [text, setText] = useState("");
   const [precip_mm, setPrecip] = useState(0);
