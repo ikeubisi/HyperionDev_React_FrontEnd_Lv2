@@ -12,16 +12,16 @@ export default function CityWeather() {
 
   return (
     <div>
-      <input
-        ref={inputRef}
-        defaultValue={city}
-        id="cityInputField"
-        // Pay attention to what the user types in the input field & any changes
-        onChange={(e) => setCity(e.target.value)}
-      />
-
+      <input ref={inputRef} defaultValue={city} id="cityInputField" />
+      &nbsp; &nbsp;
+      <button
+        onClick={() => setCity(document.getElementById("cityInputField").value)}
+      >
+        Fetch city weather
+      </button>
       {/* FetchWeather is a function component so must be passed as a prop rather than as a regular hook or normal function */}
-      <h1>Most likely country for that name: {FetchWeather({ city })}</h1>
+      <h1>Weather for {city} </h1>
+      <p> {FetchWeather({ city })}</p>
     </div>
   );
 }
