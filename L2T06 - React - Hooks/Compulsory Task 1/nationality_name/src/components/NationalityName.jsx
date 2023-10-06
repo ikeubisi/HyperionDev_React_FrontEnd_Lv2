@@ -17,8 +17,8 @@ export default function NationalityName() {
         value={username}
         onChange={(e) => setUsername(e.target.value)}
       />
-      <button onClick={FetchCountryId}>Fetch the most likely Country ID</button>
-      <h1>First Country ID: {FetchCountryId("John")}</h1>
+      <button onClick={FetchCountryId}>Fetch most likely country</button>
+      <h1>Most likely country for that name: {FetchCountryId("John")}</h1>
     </div>
   );
 }
