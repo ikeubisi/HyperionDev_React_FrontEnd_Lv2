@@ -86,11 +86,11 @@ const products = [
 
 function ProductCard({ product }) {
   // colors used for Dropdown Menu
-  const [dropdownBtnColor, setDropdownBtnColor] = useState("success");
+  const [buttonColor, setButtonColor] = useState("success");
 
-  function handleDropdownColor(chosenColor) {
-    setDropdownBtnColor(chosenColor);
-  }
+  const handleDropdownColor = (color) => {
+    setButtonColor(color);
+  };
 
   return (
     <Card>
@@ -100,10 +100,12 @@ function ProductCard({ product }) {
         <Card.Text>Price: £{product.price}</Card.Text>
         <Card.Img src={product.img} />
         <Dropdown>
-          {/* Select a dropdown item color to change button color */}
-          <Dropdown.Toggle variant={dropdownBtnColor} id="dropdown-basic">
+          {/* button color depends on which dropdown menu item selected
+          colors based on Bootstrap btn colors of success, danger and primary */}
+          <Dropdown.Toggle variant={buttonColor} id="dropdown-basic">
             Dropdown button
           </Dropdown.Toggle>
+
           <Dropdown.Menu>
             <Dropdown.Item
               value="danger"
@@ -114,15 +116,15 @@ function ProductCard({ product }) {
             </Dropdown.Item>
             <Dropdown.Item
               value="primary"
-              onClick={() => handleDropdownColor("primary")}
               href="#/action-2"
+              onClick={() => handleDropdownColor("success")}
             >
               Green
             </Dropdown.Item>
             <Dropdown.Item
               value="success"
-              onClick={() => handleDropdownColor("success")}
               href="#/action-3"
+              onClick={() => handleDropdownColor("primary")}
             >
               Blue
             </Dropdown.Item>
