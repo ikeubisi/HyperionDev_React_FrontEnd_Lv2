@@ -160,6 +160,7 @@ export default function Products() {
   return (
     <>
       <h1>Products</h1>
+      <hr />
       <TotalPrice totalPrice={totalPrice} />
       <div className="card-container">
         {/* Loop through all products and put them inside cards 

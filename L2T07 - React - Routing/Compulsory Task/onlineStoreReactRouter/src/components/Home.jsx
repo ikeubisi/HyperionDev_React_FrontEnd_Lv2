@@ -25,7 +25,8 @@ export default function Home() {
 
   return (
     <>
-      <h1>Home</h1>
+      <h1 className="mb-3">Home of The React Router Store</h1>
+      <hr />
 
       <div className="container">
         {/* I considered using a ternary which I'd normally use for toggled button settings 
@@ -33,7 +34,7 @@ export default function Home() {
         */}
         {loginLabel === "Login" && (
           <>
-            <h2>Please enter your username</h2>
+            <h1>Please enter your username</h1>
             <input
               type="text"
               value={username}
@@ -50,7 +51,7 @@ export default function Home() {
         {/* Hide logout button until user has entered their name */}
         {loginLabel === "Logout" && (
           <>
-            <h1>Welcome {welcomeName} to React Router Store</h1>
+            <h1>Welcome {welcomeName} to The React Router Store</h1>
             <button className="btn btn-secondary" onClick={handleLogout}>
               Logout
             </button>

@@ -12,15 +12,19 @@ export default function About() {
   return (
     <>
       <h1>About</h1>
+      <hr />
       <TotalPrice />
       <div className="d-flex justify-content-center">
         <Figure>
-          <Figure.Image
-            width={200}
-            height={200}
-            alt="store logo"
-            src={storeLogo}
-          />
+          <span className="display-6 fw-bold">
+            <Figure.Image
+              width={200}
+              height={200}
+              alt="store logo"
+              src={storeLogo}
+            />
+            &nbsp; The React Router Store
+          </span>
           <Figure.Caption>
             <div className="card mb-1">
               <div className="card-body">
