@@ -94,18 +94,19 @@ function ProductCard({ product }) {
   const nav = useNavigate();
   const [totalPrice, setTotalPrice] = useState(0);
 
+  // Get total product price
   function handlePurchase(price) {
     setTotalPrice(totalPrice + price);
     nav("/products", { state: totalPrice + price });
   }
 
+  // Switch dropdown button color based on selection
   const handleDropdownColor = (colorChosen) => {
     setButtonColor(colorChosen);
   };
 
   return (
     <Card id="product-cards">
-      <h2>Total Price Dudes {totalPrice}</h2>
       <Card.Body>
         <Card.Title>{product.name}</Card.Title>
         <Card.Text>{product.description}</Card.Text>
@@ -154,7 +155,7 @@ function ProductCard({ product }) {
 }
 
 export default function Products() {
-  const [totalPrice] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   return (
     <>
