@@ -98,6 +98,7 @@ function ProductCard({ product }) {
   function handlePurchase(price) {
     setTotalPrice(totalPrice + price);
     nav("/products", { state: totalPrice + price });
+    nav("/about", { state: totalPrice + price });
   }
 
   // Switch dropdown button color based on selection
