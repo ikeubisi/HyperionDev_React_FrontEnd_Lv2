@@ -1,13 +1,13 @@
 import { useState } from "react";
 
 export default function Home() {
-  // use state to hold username, welcome name and login label
+  // Use state to hold username, welcome name and login label
   const [username, setUsername] = useState("Admin");
   const [welcomeName, setWelcomeName] = useState("Admin");
   const [loginLabel, setLoginLabel] = useState("Login");
 
   const handleWelcome = () => {
-    // user cannot login if field is empty
+    // User cannot login if field is empty
     if (username.length > 0) {
       setWelcomeName(username);
       setLoginLabel("Logout");
@@ -16,7 +16,7 @@ export default function Home() {
     }
   };
 
-  // clear the welcome on logout
+  // Clear the welcome on logout
   const handleLogout = () => {
     setWelcomeName("");
     setUsername("");
@@ -28,6 +28,9 @@ export default function Home() {
       <h1>Home</h1>
 
       <div className="container">
+        {/* I considered using a ternary which I'd normally use for toggled button settings 
+        but it looks cleaner keeping the visibility functions separate given how blocky the content is 
+        */}
         {loginLabel === "Login" && (
           <>
             <h2>Please enter your username</h2>

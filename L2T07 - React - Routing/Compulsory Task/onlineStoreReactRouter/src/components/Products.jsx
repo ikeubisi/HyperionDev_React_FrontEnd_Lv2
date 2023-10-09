@@ -20,7 +20,7 @@ ProductCard.propTypes = {
   }).isRequired,
 };
 
-// our products
+// Our products
 const products = [
   {
     name: "Spoon",
@@ -85,8 +85,9 @@ const products = [
 ];
 
 function ProductCard({ product }) {
-  // colors used for Dropdown Menu
-  // green/success used as default
+  // Colors used for Dropdown Menu
+  // green/success used as default,
+  // using State so only specific button impacted rather than all of them
   const [buttonColor, setButtonColor] = useState("success");
 
   const handleDropdownColor = (colorChosen) => {
