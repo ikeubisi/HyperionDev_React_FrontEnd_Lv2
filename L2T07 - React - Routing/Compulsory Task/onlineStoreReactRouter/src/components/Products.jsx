@@ -156,7 +156,7 @@ function ProductCard({ product }) {
 }
 
 export default function Products() {
-  const [totalPrice, setTotalPrice] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(110);
 
   return (
     <>
