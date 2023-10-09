@@ -21,6 +21,10 @@ a:hover {
   color: hsl(59, 34%, 24%);
 }
 
+figure figcaption {
+  text-align: center;
+}
+
 h1,
 h2,
 h3 {
@@ -44,7 +48,7 @@ ul {
 }
 
 .card-img {
-  max-width: 250px;
+  max-width: 120px;
 }
 
 .navbar {

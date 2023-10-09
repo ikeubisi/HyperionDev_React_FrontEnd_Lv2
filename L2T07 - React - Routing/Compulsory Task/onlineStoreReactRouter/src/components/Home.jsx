@@ -47,7 +47,7 @@ export default function Home() {
         {/* Hide logout button until user has entered their name */}
         {loginLabel === "Logout" && (
           <>
-            <h1>Welcome {welcomeName}</h1>
+            <h1>Welcome {welcomeName} to React Router Store</h1>
             <button className="btn btn-secondary" onClick={handleLogout}>
               Logout
             </button>

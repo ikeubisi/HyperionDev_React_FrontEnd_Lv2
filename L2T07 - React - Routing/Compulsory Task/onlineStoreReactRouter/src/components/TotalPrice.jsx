@@ -1,3 +1,5 @@
 export default function TotalPrice() {
-  return <div>TotalPrice</div>;
+  let totalPrice = 0;
+
+  return <h2>TotalPrice £{totalPrice}</h2>;
 }

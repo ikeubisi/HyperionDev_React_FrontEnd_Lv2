@@ -20,10 +20,15 @@ export default function About() {
             src={storeLogo}
           />
           <Figure.Caption>
-            <p>
-              Welcome to our store where you will find the highest quality
-              products for the lowest prices.
-            </p>
+            <div className="card mb-1">
+              <div className="card-body">
+                <p>
+                  Welcome to our store where you will find the highest quality
+                  products for the lowest prices. We offer the best kitchen
+                  items in the entire World!
+                </p>
+              </div>
+            </div>
             <h3>Us Then</h3>
             <FigureImage width={480} alt="old store" src={oldStore} />
             <h3>Us Now</h3>

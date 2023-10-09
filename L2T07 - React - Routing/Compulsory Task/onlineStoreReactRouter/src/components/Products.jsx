@@ -3,10 +3,13 @@
 // Available at: https://react-bootstrap.github.io/docs/components/cards/ (Accessed: 09 October 2023).
 import Card from "react-bootstrap/Card";
 import PropTypes from "prop-types";
+import Dropdown from "react-bootstrap/Dropdown";
+import TotalPrice from "./TotalPrice";
 
 // Learning about PropTypes.shape for validating objects from
 // Ferrari, C. (2019) How to specify the shape of an object with proptypes, DEV Community.
 // Available at: https://dev.to/cesareferrari/how-to-specify-the-shape-of-an-object-with-proptypes-3c56 (Accessed: 09 October 2023).
+// We validate ProductCard rather than Products
 ProductCard.propTypes = {
   product: PropTypes.shape({
     name: PropTypes.string.isRequired,
@@ -87,6 +90,17 @@ function ProductCard({ product }) {
         <Card.Text>{product.description}</Card.Text>
         <Card.Text>Price: £{product.price}</Card.Text>
         <Card.Img src={product.img} />
+        <Dropdown>
+          <Dropdown.Toggle variant="success" id="dropdown-basic">
+            Dropdown button
+          </Dropdown.Toggle>
+
+          <Dropdown.Menu>
+            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
       </Card.Body>
     </Card>
   );
@@ -95,7 +109,8 @@ function ProductCard({ product }) {
 export default function Products() {
   return (
     <>
-      <h2>Products</h2>
+      <h1>Products</h1>
+      <TotalPrice />
       <div className="card-container">
         {/* Loop through all producsts and put them inside cards 
         names are all unique so used as keys
