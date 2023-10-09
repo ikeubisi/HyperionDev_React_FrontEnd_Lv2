@@ -15,10 +15,12 @@ function App() {
   // useLocation hook.
   const nav = useNavigate();
 
-  const location = useLocation();
-  const data = location.state;
-  // Outputs 'iPhone 12'
-  console.log("product", data.product);
+  // // initialises the location constant by calling the useLocation hook.
+  // const location = useLocation();
+  // // initialises the data constant with the state object
+  // const data = location.state;
+  // // Outputs 'iPhone 12'
+  // console.log("product", data.product);
 
   return (
     <div className="tab-content">
