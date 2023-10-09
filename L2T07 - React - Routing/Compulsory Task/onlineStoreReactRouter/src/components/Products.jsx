@@ -5,6 +5,7 @@ import Card from "react-bootstrap/Card";
 import PropTypes from "prop-types";
 import Dropdown from "react-bootstrap/Dropdown";
 import TotalPrice from "./TotalPrice";
+import { useState } from "react";
 
 // Learning about PropTypes.shape for validating objects from
 // Ferrari, C. (2019) How to specify the shape of an object with proptypes, DEV Community.
@@ -19,6 +20,7 @@ ProductCard.propTypes = {
   }).isRequired,
 };
 
+// our products
 const products = [
   {
     name: "Spoon",
@@ -83,6 +85,13 @@ const products = [
 ];
 
 function ProductCard({ product }) {
+  // colors used for Dropdown Menu
+  const [dropdownBtnColor, setDropdownBtnColor] = useState("success");
+
+  function handleDropdownColor(chosenColor) {
+    setDropdownBtnColor(chosenColor);
+  }
+
   return (
     <Card>
       <Card.Body>
@@ -91,14 +100,32 @@ function ProductCard({ product }) {
         <Card.Text>Price: £{product.price}</Card.Text>
         <Card.Img src={product.img} />
         <Dropdown>
-          <Dropdown.Toggle variant="success" id="dropdown-basic">
+          {/* Select a dropdown item color to change button color */}
+          <Dropdown.Toggle variant={dropdownBtnColor} id="dropdown-basic">
             Dropdown button
           </Dropdown.Toggle>
-
           <Dropdown.Menu>
-            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+            <Dropdown.Item
+              value="danger"
+              onClick={() => handleDropdownColor("danger")}
+              href="#/action-1"
+            >
+              Red
+            </Dropdown.Item>
+            <Dropdown.Item
+              value="primary"
+              onClick={() => handleDropdownColor("primary")}
+              href="#/action-2"
+            >
+              Green
+            </Dropdown.Item>
+            <Dropdown.Item
+              value="success"
+              onClick={() => handleDropdownColor("success")}
+              href="#/action-3"
+            >
+              Blue
+            </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
       </Card.Body>
