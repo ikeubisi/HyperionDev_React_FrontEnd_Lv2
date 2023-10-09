@@ -91,8 +91,8 @@ function ProductCard({ product }) {
   // green/success used as default,
   // using State so only specific button impacted rather than all of them
   const [buttonColor, setButtonColor] = useState("success");
-  const [totalPrice, setTotalPrice] = useState(0);
   const nav = useNavigate();
+  const [totalPrice, setTotalPrice] = useState(0);
 
   function handlePurchase(price) {
     setTotalPrice(totalPrice + price);
@@ -153,16 +153,22 @@ function ProductCard({ product }) {
 }
 
 export default function Products() {
+  const [totalPrice] = useState(0);
+
   return (
     <>
       <h1>Products</h1>
-      <TotalPrice totalPrice={100} />
+      <TotalPrice totalPrice={totalPrice} />
       <div className="card-container">
         {/* Loop through all producsts and put them inside cards 
         names are all unique so used as keys
         */}
         {products.map((product) => (
-          <ProductCard key={product.name} product={product} />
+          <ProductCard
+            totalPrice={totalPrice}
+            key={product.name}
+            product={product}
+          />
         ))}
       </div>
     </>
