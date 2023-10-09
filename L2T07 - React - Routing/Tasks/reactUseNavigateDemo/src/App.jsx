@@ -1,9 +1,7 @@
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./App.css";
 
 function App() {
-  const nav = useNavigate();
-
   // The first argument is the route to navigate to, in this case, /products. This
   // means the user will be redirected to the /products page when clicking the
   // button.
@@ -15,6 +13,12 @@ function App() {
 
   // This information could be accessed on the destination route, typically through the
   // useLocation hook.
+  const nav = useNavigate();
+
+  const location = useLocation();
+  const data = location.state;
+  // Outputs 'iPhone 12'
+  console.log("product", data.product);
 
   return (
     <div className="tab-content">
