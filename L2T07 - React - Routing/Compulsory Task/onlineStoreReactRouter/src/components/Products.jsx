@@ -7,6 +7,7 @@ import Dropdown from "react-bootstrap/Dropdown";
 import TotalPrice from "./TotalPrice";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 // Learning about PropTypes.shape for validating objects from
 // Ferrari, C. (2019) How to specify the shape of an object with proptypes, DEV Community.
@@ -90,6 +91,13 @@ function ProductCard({ product }) {
   // green/success used as default,
   // using State so only specific button impacted rather than all of them
   const [buttonColor, setButtonColor] = useState("success");
+  const [totalPrice, setTotalPrice] = useState(0);
+  const nav = useNavigate();
+
+  function handlePurchase(price) {
+    setTotalPrice(totalPrice + price);
+    nav("/products", { state: totalPrice + price });
+  }
 
   const handleDropdownColor = (colorChosen) => {
     setButtonColor(colorChosen);
@@ -133,7 +141,12 @@ function ProductCard({ product }) {
             </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
-        <Button className="btn btn-info">Buy</Button>
+        <Button
+          onClick={() => handlePurchase({ ...product.price })}
+          className="btn btn-info"
+        >
+          Buy
+        </Button>
       </Card.Body>
     </Card>
   );
@@ -143,7 +156,7 @@ export default function Products() {
   return (
     <>
       <h1>Products</h1>
-      <TotalPrice />
+      <TotalPrice totalPrice={100} />
       <div className="card-container">
         {/* Loop through all producsts and put them inside cards 
         names are all unique so used as keys
