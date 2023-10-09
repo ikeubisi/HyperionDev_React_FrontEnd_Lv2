@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 // Learning about PropTypes.shape for validating objects from
 // Ferrari, C. (2019) How to specify the shape of an object with proptypes, DEV Community.
 // Available at: https://dev.to/cesareferrari/how-to-specify-the-shape-of-an-object-with-proptypes-3c56 (Accessed: 09 October 2023).
-Products.propTypes = {
+ProductCard.propTypes = {
   product: PropTypes.shape({
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
