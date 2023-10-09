@@ -19,6 +19,7 @@ export default function Home() {
   // clear the welcome on logout
   const handleLogout = () => {
     setWelcomeName("");
+    setUsername("");
     setLoginLabel("Login");
   };
 
@@ -26,23 +27,33 @@ export default function Home() {
     <>
       <h1>Home</h1>
 
-      <h1>Welcome {welcomeName}</h1>
-      <input
-        type="text"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-        id="loginName"
-      />
+      <div className="container">
+        {loginLabel === "Login" && (
+          <>
+            <h2>Please enter your username</h2>
+            <input
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              id="loginName"
+              className="m-2"
+            />
+            <button className="btn btn-primary" onClick={handleWelcome}>
+              {loginLabel}
+            </button>
+          </>
+        )}
 
-      <button className="btn btn-primary" onClick={handleWelcome}>
-        {loginLabel}
-      </button>
-      {/* Hide logout button until user has entered their name */}
-      {loginLabel === "Logout" && (
-        <button className="btn btn-secondary" onClick={handleLogout}>
-          Logout
-        </button>
-      )}
+        {/* Hide logout button until user has entered their name */}
+        {loginLabel === "Logout" && (
+          <>
+            <h1>Welcome {welcomeName}</h1>
+            <button className="btn btn-secondary" onClick={handleLogout}>
+              Logout
+            </button>
+          </>
+        )}
+      </div>
     </>
   );
 }
