@@ -94,7 +94,7 @@ function ProductCard({ product }) {
   };
 
   return (
-    <Card>
+    <Card id="product-cards">
       <Card.Body>
         <Card.Title>{product.name}</Card.Title>
         <Card.Text>{product.description}</Card.Text>
