@@ -43,6 +43,10 @@ ul {
   background-color: hsl(58, 31%, 50%);
 }
 
+.card-img {
+  max-width: 250px;
+}
+
 .navbar {
   background: rgb(249, 244, 132);
   background: linear-gradient(90deg, rgba(249, 244, 132, 1) 0%, rgba(244, 239, 113, 1) 35%, rgba(235, 229, 95, 1) 100%);
