@@ -6,11 +6,13 @@ import storeLogo from "../assets/storeLogo.png";
 import oldStore from "../assets/oldStore.jpg";
 import store from "../assets/store.jpg";
 import { FigureImage } from "react-bootstrap";
+import TotalPrice from "./TotalPrice";
 
 export default function About() {
   return (
     <>
       <h1>About</h1>
+      <TotalPrice />
       <div className="d-flex justify-content-center">
         <Figure>
           <Figure.Image
