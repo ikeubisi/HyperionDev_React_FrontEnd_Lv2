@@ -10,6 +10,7 @@ body {
   font-size: 1rem;
 }
 
+
 a {
   text-decoration: none;
   color: hsl(58, 37%, 32%);
@@ -18,6 +19,28 @@ a {
 a:hover {
   font-weight: bold;
   color: hsl(59, 34%, 24%);
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+nav {
+  font-size: 1.2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.btn {
+  background-color: hsl(58, 85%, 70%);
+  border: solid 1px;
+}
+
+.btn:hover {
+  background-color: hsl(58, 31%, 50%);
 }
 
 .navbar {
