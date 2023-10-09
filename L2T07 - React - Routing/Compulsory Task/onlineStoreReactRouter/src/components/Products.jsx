@@ -86,10 +86,11 @@ const products = [
 
 function ProductCard({ product }) {
   // colors used for Dropdown Menu
+  // green/success used as default
   const [buttonColor, setButtonColor] = useState("success");
 
-  const handleDropdownColor = (color) => {
-    setButtonColor(color);
+  const handleDropdownColor = (colorChosen) => {
+    setButtonColor(colorChosen);
   };
 
   return (
