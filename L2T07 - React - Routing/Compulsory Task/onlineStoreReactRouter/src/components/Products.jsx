@@ -105,6 +105,7 @@ function ProductCard({ product }) {
 
   return (
     <Card id="product-cards">
+      <h2>Total Price Dudes {totalPrice}</h2>
       <Card.Body>
         <Card.Title>{product.name}</Card.Title>
         <Card.Text>{product.description}</Card.Text>
@@ -142,7 +143,7 @@ function ProductCard({ product }) {
           </Dropdown.Menu>
         </Dropdown>
         <Button
-          onClick={() => handlePurchase({ ...product.price })}
+          onClick={() => handlePurchase(product.price)}
           className="btn btn-info"
         >
           Buy
@@ -160,7 +161,7 @@ export default function Products() {
       <h1>Products</h1>
       <TotalPrice totalPrice={totalPrice} />
       <div className="card-container">
-        {/* Loop through all producsts and put them inside cards 
+        {/* Loop through all products and put them inside cards 
         names are all unique so used as keys
         */}
         {products.map((product) => (
