@@ -82,7 +82,7 @@ export default function Products() {
     <>
       <h1>Products</h1>
       <hr />
-      <TotalPrice totalPrice={totalPrice} />
+      <TotalPrice />
       <div className="card-container">
         {/* Loop through all products and put them inside cards 
           names are all unique so used as keys
