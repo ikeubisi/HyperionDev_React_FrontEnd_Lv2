@@ -1,9 +1,3 @@
-import PropTypes from "prop-types";
-
-TotalPrice.propTypes = {
-  totalPrice: PropTypes.number.isRequired,
-};
-
 export default function TotalPrice() {
   const localPrice = localStorage.getItem("localPrice");
 

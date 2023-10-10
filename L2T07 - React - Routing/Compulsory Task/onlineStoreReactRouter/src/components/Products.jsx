@@ -68,6 +68,7 @@ const products = [
 
 export default function Products() {
   const [totalPrice, setTotalPrice] = useState(0);
+
   // Use localStorage
   const [localPrice, setLocalPrice] = useState(0);
 
