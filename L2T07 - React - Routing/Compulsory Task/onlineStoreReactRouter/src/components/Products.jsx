@@ -166,7 +166,7 @@ export default function Products() {
   return (
     <>
       <h1>Products</h1>
-      <h2>The Total Price {totalPrice}</h2>
+      <h2>The Total Price £{totalPrice}</h2>
       <hr />
       <TotalPrice totalPrice={totalPrice} />
       <div className="card-container">

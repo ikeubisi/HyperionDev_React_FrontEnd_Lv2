@@ -70,3 +70,9 @@ ul {
     margin: auto;
   }
 }
+
+@media screen and (max-width: 780px) {
+  #reactRouterAboutLogo {
+    font-size: 1.2rem !important;
+  }
+}

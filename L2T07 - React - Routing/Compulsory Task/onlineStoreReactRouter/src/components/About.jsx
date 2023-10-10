@@ -16,7 +16,10 @@ export default function About() {
       <TotalPrice />
       <div className="d-flex justify-content-center">
         <Figure>
-          <span className="display-6 fw-bold">
+          <span
+            id="reactRouterAboutLogo"
+            className="display-6 fw-bolder text-secondary"
+          >
             <Figure.Image
               width={200}
               height={200}
