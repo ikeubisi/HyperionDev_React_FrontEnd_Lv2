@@ -95,7 +95,8 @@ export default function Products() {
         {products.map((product) => (
           <ProductCard
             totalPrice={totalPrice}
-            key={product.name}
+            // Create unique id for keys
+            key={crypto.randomUUID()}
             product={product}
             updateTotalPrice={updateTotalPrice}
           />
