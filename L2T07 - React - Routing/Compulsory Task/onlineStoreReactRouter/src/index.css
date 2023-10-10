@@ -64,6 +64,10 @@ ul {
   margin: auto;
 }
 
+#totalPrice {
+  text-align: right;
+}
+
 @media screen and (max-width: 991px) {
 
   nav ul {

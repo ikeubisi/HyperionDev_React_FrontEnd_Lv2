@@ -160,7 +160,7 @@ function ProductCard({ product, updateTotalPrice, totalPrice }) {
 }
 
 export default function Products() {
-  const [totalPrice, setTotalPrice] = useState(110);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   // Update total price
   const updateTotalPrice = (price) => {
@@ -170,7 +170,6 @@ export default function Products() {
   return (
     <>
       <h1>Products</h1>
-      <h2>The Total Price £{totalPrice}</h2>
       <hr />
       <TotalPrice totalPrice={totalPrice} />
       <div className="card-container">
