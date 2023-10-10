@@ -20,6 +20,8 @@ ProductCard.propTypes = {
     price: PropTypes.number.isRequired,
     img: PropTypes.string.isRequired,
   }).isRequired,
+  totalPrice: PropTypes.number.isRequired,
+  updateTotalPrice: PropTypes.func.isRequired,
 };
 
 // Our products
@@ -86,17 +88,16 @@ const products = [
   },
 ];
 
-function ProductCard({ product }) {
+function ProductCard({ product, updateTotalPrice, totalPrice }) {
   // Colors used for Dropdown Menu
   // green/success used as default,
   // using State so only specific button impacted rather than all of them
   const [buttonColor, setButtonColor] = useState("success");
   const nav = useNavigate();
-  const [totalPrice, setTotalPrice] = useState(0);
 
   // Get total product price
   function handlePurchase(price) {
-    setTotalPrice(totalPrice + price);
+    updateTotalPrice(price);
     nav("/products", { state: totalPrice + price });
   }
 
@@ -107,8 +108,6 @@ function ProductCard({ product }) {
 
   return (
     <Card id="product-cards">
-      <h2>The Total Price {totalPrice}</h2>
-
       <Card.Body>
         <Card.Title>{product.name}</Card.Title>
         <Card.Text>{product.description}</Card.Text>
@@ -163,6 +162,11 @@ function ProductCard({ product }) {
 export default function Products() {
   const [totalPrice, setTotalPrice] = useState(110);
 
+  // Update total price
+  const updateTotalPrice = (price) => {
+    setTotalPrice(totalPrice + price);
+  };
+
   return (
     <>
       <h1>Products</h1>
@@ -178,6 +182,7 @@ export default function Products() {
             totalPrice={totalPrice}
             key={product.name}
             product={product}
+            updateTotalPrice={updateTotalPrice}
           />
         ))}
       </div>
