@@ -37,7 +37,8 @@ export default function About() {
                 <p>
                   Welcome to our store where you will find the highest quality
                   products for the lowest prices. We offer the best kitchen
-                  items in the entire World!
+                  items in the entire World! You will be utterly amazed by all
+                  you will find.
                 </p>
               </div>
             </div>
