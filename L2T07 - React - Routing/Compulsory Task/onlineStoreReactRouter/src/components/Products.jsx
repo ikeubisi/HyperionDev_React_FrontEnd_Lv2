@@ -98,7 +98,6 @@ function ProductCard({ product }) {
   function handlePurchase(price) {
     setTotalPrice(totalPrice + price);
     nav("/products", { state: totalPrice + price });
-    nav("/about", { state: totalPrice + price });
   }
 
   // Switch dropdown button color based on selection
@@ -108,6 +107,8 @@ function ProductCard({ product }) {
 
   return (
     <Card id="product-cards">
+      <h2>The Total Price {totalPrice}</h2>
+
       <Card.Body>
         <Card.Title>{product.name}</Card.Title>
         <Card.Text>{product.description}</Card.Text>
@@ -116,7 +117,11 @@ function ProductCard({ product }) {
         <Dropdown>
           {/* button color depends on which dropdown menu item selected
           colors based on Bootstrap btn colors of success, danger and primary */}
-          <Dropdown.Toggle variant={buttonColor} id="dropdown-basic">
+          <Dropdown.Toggle
+            variant={buttonColor}
+            id="dropdown-basic"
+            className="mb-2 mt-2"
+          >
             Dropdown button
           </Dropdown.Toggle>
 
@@ -161,6 +166,7 @@ export default function Products() {
   return (
     <>
       <h1>Products</h1>
+      <h2>The Total Price {totalPrice}</h2>
       <hr />
       <TotalPrice totalPrice={totalPrice} />
       <div className="card-container">
