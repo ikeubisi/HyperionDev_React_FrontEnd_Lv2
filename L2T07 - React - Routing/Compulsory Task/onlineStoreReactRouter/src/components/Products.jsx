@@ -1,5 +1,5 @@
-import TotalPrice from "./TotalPrice";
 import ProductCard from "./ProductCard";
+import TotalPrice from "./TotalPrice";
 import { useState } from "react";
 
 // Our products
