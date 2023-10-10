@@ -7,13 +7,16 @@ import oldStore from "../assets/oldStore.jpg";
 import store from "../assets/store.jpg";
 import { FigureImage } from "react-bootstrap";
 import TotalPrice from "./TotalPrice";
+import { useState } from "react";
 
 export default function About() {
+  const [totalPrice] = useState();
+
   return (
     <>
       <h1>About</h1>
       <hr />
-      <TotalPrice />
+      <TotalPrice totalPrice={totalPrice} />
       <div className="d-flex justify-content-center">
         <Figure>
           <span

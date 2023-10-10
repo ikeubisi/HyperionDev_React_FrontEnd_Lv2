@@ -110,9 +110,6 @@ function ProductCard({ product, updateTotalPrice, totalPrice }) {
     <Card id="product-cards">
       <Card.Body>
         <Card.Title>{product.name}</Card.Title>
-        <Card.Text>{product.description}</Card.Text>
-        <Card.Text>Price: £{product.price}</Card.Text>
-        <Card.Img src={product.img} />
         <Dropdown>
           {/* button color depends on which dropdown menu item selected
           colors based on Bootstrap btn colors of success, danger and primary */}
@@ -148,6 +145,10 @@ function ProductCard({ product, updateTotalPrice, totalPrice }) {
             </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
+
+        <Card.Text>{product.description}</Card.Text>
+        <Card.Text>Price: £{product.price}</Card.Text>
+        <Card.Img src={product.img} className="m-4" />
         <Button
           onClick={() => handlePurchase(product.price)}
           className="btn btn-info"
