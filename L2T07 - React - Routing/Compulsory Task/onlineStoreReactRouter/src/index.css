@@ -59,6 +59,14 @@ ul {
   margin: auto;
 }
 
+#clearBtn {
+  margin: auto;
+}
+
+#priceSection {
+  text-align: right;
+}
+
 #product-cards {
   max-width: 350px;
   margin: auto;
