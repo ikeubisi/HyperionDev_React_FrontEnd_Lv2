@@ -2,12 +2,12 @@
 // Figures (no date) React Bootstrap. Available at: https://react-bootstrap.github.io/docs/components/figures/
 // (Accessed: 09 October 2023).
 import Figure from "react-bootstrap/Figure";
-import storeLogo from "../assets/storeLogo.png";
+import { FigureImage } from "react-bootstrap";
+import { useState } from "react";
 import oldStore from "../assets/oldStore.jpg";
 import store from "../assets/store.jpg";
-import { FigureImage } from "react-bootstrap";
+import storeLogo from "../assets/storeLogo.png";
 import TotalPrice from "./TotalPrice";
-import { useState } from "react";
 
 export default function About() {
   const [totalPrice] = useState();

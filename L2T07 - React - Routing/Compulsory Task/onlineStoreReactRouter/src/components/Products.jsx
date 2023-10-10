@@ -1,6 +1,6 @@
+import { useState } from "react";
 import ProductCard from "./ProductCard";
 import TotalPrice from "./TotalPrice";
-import { useState } from "react";
 
 // Our products
 const products = [
