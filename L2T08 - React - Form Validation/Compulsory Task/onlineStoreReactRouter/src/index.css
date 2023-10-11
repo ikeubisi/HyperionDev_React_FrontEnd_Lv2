@@ -60,7 +60,6 @@ ul {
   background: rgb(249, 244, 132);
   background: linear-gradient(90deg, rgba(249, 244, 132, 1) 0%, rgba(244, 239, 113, 1) 35%, rgba(235, 229, 95, 1) 100%);
   box-shadow: var(--box-shadow-main);
-  max-width: 270px;
   margin: auto;
 }
 
