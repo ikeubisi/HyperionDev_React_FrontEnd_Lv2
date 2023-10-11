@@ -61,9 +61,7 @@ export default function RegisterPage() {
               id="firstName"
               name="firstName"
               type="text"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.firstName}
+              {...formik.getFieldProps("firstName")}
               className="m-2"
             />
             {formik.touched.firstName && formik.errors.firstName ? (
@@ -79,9 +77,7 @@ export default function RegisterPage() {
               id="lastName"
               name="lastName"
               type="text"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.lastName}
+              {...formik.getFieldProps("lastName")}
               className="m-2"
             />
             {formik.touched.lastName && formik.errors.lastName ? (
@@ -98,9 +94,7 @@ export default function RegisterPage() {
               name="email"
               type="email"
               placeholder="e.g. bob@email.com"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.email}
+              {...formik.getFieldProps("email")}
               className="m-2"
             />
             {formik.touched.email && formik.errors.email ? (
@@ -116,9 +110,7 @@ export default function RegisterPage() {
               id="password"
               name="password"
               type="password"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.password}
+              {...formik.getFieldProps("password")}
               className="m-2"
             />
             {formik.touched.password && formik.errors.password ? (
@@ -134,9 +126,7 @@ export default function RegisterPage() {
               id="passwordConfirm"
               name="passwordConfirm"
               type="password"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.passwordConfirm}
+              {...formik.getFieldProps("passwordConfirm")}
               className="m-2"
             />
             {formik.touched.passwordConfirm && formik.errors.passwordConfirm ? (
