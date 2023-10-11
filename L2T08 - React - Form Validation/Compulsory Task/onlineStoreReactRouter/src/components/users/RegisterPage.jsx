@@ -2,12 +2,14 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 
 export default function RegisterPage() {
+  // Formik used to give users feedback over errors
   const formik = useFormik({
     initialValues: {
       firstName: "",
       lastName: "",
       email: "",
     },
+    // Yup used for validating objects entered
     validationSchema: Yup.object({
       firstName: Yup.string()
         .max(15, "Must be 15 characters or less")
@@ -16,6 +18,12 @@ export default function RegisterPage() {
         .max(20, "Must be 20 characters or less")
         .required("Required"),
       email: Yup.string().email("Invalid email address").required("Required"),
+      password: Yup.string()
+        .min(8, "Must be 8 characters or more")
+        .required("Required"),
+      passwordConfirm: Yup.string()
+        .min(8, "Must be 8 characters or more")
+        .required("Required"),
     }),
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
@@ -66,6 +74,34 @@ export default function RegisterPage() {
         />
         {formik.touched.email && formik.errors.email ? (
           <div>{formik.errors.email}</div>
+        ) : null}
+
+        <label htmlFor="password">Password</label>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.password}
+          className="m-2"
+        />
+        {formik.touched.password && formik.errors.password ? (
+          <div>{formik.errors.password}</div>
+        ) : null}
+
+        <label htmlFor="passwordConfirm">Password</label>
+        <input
+          id="passwordConfirm"
+          name="passwordConfirm"
+          type="password"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.passwordConfirm}
+          className="m-2"
+        />
+        {formik.touched.passwordConfirm && formik.errors.passwordConfirm ? (
+          <div>{formik.errors.passwordConfirm}</div>
         ) : null}
 
         <button className="btn btn-primary" type="submit">
