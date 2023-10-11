@@ -3,11 +3,14 @@ import * as Yup from "yup";
 
 export default function RegisterPage() {
   // Formik used to give users feedback over errors
+  // Majority of code based off https://formik.org/docs/tutorial
   const formik = useFormik({
     initialValues: {
       firstName: "",
       lastName: "",
       email: "",
+      password: "",
+      passwordConfirm: "",
     },
     // Yup used for validating objects entered
     validationSchema: Yup.object({
@@ -29,6 +32,10 @@ export default function RegisterPage() {
         )
         .required("Required"),
       passwordConfirm: Yup.string()
+        // Password match check learned from
+        // Strahinja AjvazStrahinja Ajvaz&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 et al. (1964) Password validation with Yup and Formik, Stack Overflow.
+        // Available at: https://stackoverflow.com/questions/49502436/password-validation-with-yup-and-formik
+        // (Accessed: 11 October 2023).
         .oneOf([Yup.ref("password"), null], "Passwords must match")
         .required("Required"),
     }),

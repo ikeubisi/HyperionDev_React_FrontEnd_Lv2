@@ -1,6 +1,7 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
+// Code heavily lifted and documented from RegisterPage using Formik & Yup
 export default function LoginPage() {
   const formik = useFormik({
     initialValues: {
