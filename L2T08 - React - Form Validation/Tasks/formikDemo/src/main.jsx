@@ -1,5 +1,6 @@
-import React from "react";
+import ReactDOM from "react-dom";
 import { useFormik } from "formik";
+import "./styles.css";
 
 const SignupForm = () => {
   // Note that we have to initialize ALL of fields with values. These
@@ -49,3 +50,10 @@ const SignupForm = () => {
     </form>
   );
 };
+
+function App() {
+  return <SignupForm />;
+}
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
