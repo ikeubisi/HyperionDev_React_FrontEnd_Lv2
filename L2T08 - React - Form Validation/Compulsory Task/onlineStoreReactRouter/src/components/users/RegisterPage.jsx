@@ -61,6 +61,8 @@ export default function RegisterPage() {
               id="firstName"
               name="firstName"
               type="text"
+              // ...formik.getFieldProps() method returns to you the exact group of onChange,
+              // onBlur, and value, checked for a given field
               {...formik.getFieldProps("firstName")}
               className="m-2"
             />
