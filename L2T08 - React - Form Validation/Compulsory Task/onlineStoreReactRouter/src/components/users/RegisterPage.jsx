@@ -24,7 +24,7 @@ export default function RegisterPage() {
         // Available at: https://stackoverflow.com/questions/55451304/formik-yup-password-strength-validation-with-react
         // (Accessed: 11 October 2023).
         .matches(
-          /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
+          /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/,
           "Must Contain At Least 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
         )
         .required("Required"),
