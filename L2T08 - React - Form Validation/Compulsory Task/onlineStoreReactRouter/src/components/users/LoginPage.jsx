@@ -36,7 +36,9 @@ export default function LoginPage() {
               className="m-2"
             />
             {formik.touched.email && formik.errors.email ? (
-              <div>{formik.errors.email}</div>
+              <div className="fw-bold text-danger mb-1">
+                {formik.errors.email}
+              </div>
             ) : null}
           </div>
 
@@ -52,7 +54,9 @@ export default function LoginPage() {
               className="m-2"
             />
             {formik.touched.password && formik.errors.password ? (
-              <div>{formik.errors.password}</div>
+              <div className="fw-bold text-danger mb-1">
+                {formik.errors.password}
+              </div>
             ) : null}
           </div>
         </div>

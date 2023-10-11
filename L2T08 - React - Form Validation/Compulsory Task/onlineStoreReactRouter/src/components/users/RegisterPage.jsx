@@ -61,7 +61,9 @@ export default function RegisterPage() {
               className="m-2"
             />
             {formik.touched.firstName && formik.errors.firstName ? (
-              <div>{formik.errors.firstName}</div>
+              <div className="fw-bold text-danger mb-1">
+                {formik.errors.firstName}
+              </div>
             ) : null}
           </div>
 
@@ -77,7 +79,9 @@ export default function RegisterPage() {
               className="m-2"
             />
             {formik.touched.lastName && formik.errors.lastName ? (
-              <div>{formik.errors.lastName}</div>
+              <div className="fw-bold text-danger mb-1">
+                {formik.errors.lastName}
+              </div>
             ) : null}
           </div>
 
@@ -93,7 +97,9 @@ export default function RegisterPage() {
               className="m-2"
             />
             {formik.touched.email && formik.errors.email ? (
-              <div>{formik.errors.email}</div>
+              <div className="fw-bold text-danger mb-1">
+                {formik.errors.email}
+              </div>
             ) : null}
           </div>
 
@@ -109,7 +115,9 @@ export default function RegisterPage() {
               className="m-2"
             />
             {formik.touched.password && formik.errors.password ? (
-              <div>{formik.errors.password}</div>
+              <div className="fw-bold text-danger mb-1">
+                {formik.errors.password}
+              </div>
             ) : null}
           </div>
 
@@ -125,7 +133,9 @@ export default function RegisterPage() {
               className="m-2"
             />
             {formik.touched.passwordConfirm && formik.errors.passwordConfirm ? (
-              <div>{formik.errors.passwordConfirm}</div>
+              <div className="fw-bold text-danger mb-1">
+                {formik.errors.passwordConfirm}
+              </div>
             ) : null}
           </div>
         </div>
