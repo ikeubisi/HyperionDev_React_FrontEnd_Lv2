@@ -19,11 +19,16 @@ export default function RegisterPage() {
         .required("Required"),
       email: Yup.string().email("Invalid email address").required("Required"),
       password: Yup.string()
-        .min(8, "Must be 8 characters or more")
+        // Password regular expression check taken from
+        // V, S.V. et al. (1965) Formik, yup password strength validation with react, Stack Overflow.
+        // Available at: https://stackoverflow.com/questions/55451304/formik-yup-password-strength-validation-with-react
+        // (Accessed: 11 October 2023).
+        .matches(
+          /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
+          "Must Contain At Least 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
+        )
         .required("Required"),
-      passwordConfirm: Yup.string()
-        .min(8, "Must be 8 characters or more")
-        .required("Required"),
+      passwordConfirm: Yup.string().required("Required"),
     }),
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
@@ -80,7 +85,7 @@ export default function RegisterPage() {
         <input
           id="password"
           name="password"
-          type="password"
+          type="text"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.password}
@@ -90,7 +95,7 @@ export default function RegisterPage() {
           <div>{formik.errors.password}</div>
         ) : null}
 
-        <label htmlFor="passwordConfirm">Password</label>
+        <label htmlFor="passwordConfirm">Password Again</label>
         <input
           id="passwordConfirm"
           name="passwordConfirm"
