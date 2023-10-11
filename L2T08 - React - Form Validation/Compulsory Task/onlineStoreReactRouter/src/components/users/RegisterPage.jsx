@@ -28,7 +28,9 @@ export default function RegisterPage() {
           "Must Contain At Least 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
         )
         .required("Required"),
-      passwordConfirm: Yup.string().required("Required"),
+      passwordConfirm: Yup.string()
+        .oneOf([Yup.ref("password"), null], "Passwords must match")
+        .required("Required"),
     }),
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
@@ -85,7 +87,7 @@ export default function RegisterPage() {
         <input
           id="password"
           name="password"
-          type="text"
+          type="password"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.password}
