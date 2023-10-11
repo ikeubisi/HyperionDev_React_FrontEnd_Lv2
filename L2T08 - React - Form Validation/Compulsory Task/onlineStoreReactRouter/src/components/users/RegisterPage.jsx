@@ -49,7 +49,11 @@ export default function RegisterPage() {
     <>
       <h1>Register</h1>
       <hr />
-      <form onSubmit={formik.handleSubmit}>
+      <h5>
+        Passwords must be at least 8 characters long, have at least 1 upper case
+        and 1 lower case letter and have at least 1 special character eg `!`.
+      </h5>
+      <form onSubmit={formik.handleSubmit} className="mt-3">
         <div className="column">
           <div className="form-group col">
             <label htmlFor="firstName">First Name</label>
@@ -93,6 +97,7 @@ export default function RegisterPage() {
               id="email"
               name="email"
               type="email"
+              placeholder="e.g. bob@email.com"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.email}
