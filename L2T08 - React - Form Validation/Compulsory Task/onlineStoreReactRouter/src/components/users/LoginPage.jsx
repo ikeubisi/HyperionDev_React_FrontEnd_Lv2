@@ -31,9 +31,7 @@ export default function LoginPage() {
               id="email"
               name="email"
               type="email"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.email}
+              {...formik.getFieldProps("email")}
               className="m-2"
             />
             {formik.touched.email && formik.errors.email ? (
@@ -49,9 +47,7 @@ export default function LoginPage() {
               id="password"
               name="password"
               type="password"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.password}
+              {...formik.getFieldProps("password")}
               className="m-2"
             />
             {formik.touched.password && formik.errors.password ? (
