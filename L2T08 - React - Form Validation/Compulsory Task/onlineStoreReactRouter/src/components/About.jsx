@@ -8,6 +8,7 @@ import oldStore from "../assets/oldStore.jpg";
 import store from "../assets/store.jpg";
 import storeLogo from "../assets/storeLogo.png";
 import TotalPrice from "./TotalPrice";
+import "../styles/about.css";
 
 export default function About() {
   const [totalPrice] = useState();

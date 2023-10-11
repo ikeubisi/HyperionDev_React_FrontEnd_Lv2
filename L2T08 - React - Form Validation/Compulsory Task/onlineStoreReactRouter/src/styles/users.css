@@ -1,0 +1,9 @@
+label {
+    min-width: 120px;
+}
+
+@media screen and (max-width: 780px) {
+    label {
+        min-width: none;
+    }
+}

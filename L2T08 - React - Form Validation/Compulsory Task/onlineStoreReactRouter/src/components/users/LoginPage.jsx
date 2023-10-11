@@ -1,5 +1,6 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import "../../styles/users.css";
 
 // Code heavily lifted and documented from RegisterPage using Formik & Yup
 export default function LoginPage() {
@@ -24,7 +25,7 @@ export default function LoginPage() {
       <hr />
       <form onSubmit={formik.handleSubmit}>
         <div className="column">
-          <div className="form-group col">
+          <div className="form-group">
             <label htmlFor="email">Email Address</label>
             <input
               id="email"
@@ -42,7 +43,7 @@ export default function LoginPage() {
             ) : null}
           </div>
 
-          <div className="form-group col">
+          <div className="form-group">
             <label htmlFor="password">Password</label>
             <input
               id="password"
