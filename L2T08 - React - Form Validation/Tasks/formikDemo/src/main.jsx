@@ -84,4 +84,7 @@ function App() {
 }
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <App />,
+  rootElement
+);
