@@ -5,9 +5,13 @@ export default function LoginPage() {
   const formik = useFormik({
     initialValues: {
       email: "",
+      password: "",
     },
     validationSchema: Yup.object({
       email: Yup.string().email("Invalid email address").required("Required"),
+      password: Yup.string()
+        .min(8, "Must be 8 characters or more")
+        .required("Required"),
     }),
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
@@ -30,6 +34,20 @@ export default function LoginPage() {
         />
         {formik.touched.email && formik.errors.email ? (
           <div>{formik.errors.email}</div>
+        ) : null}
+
+        <label htmlFor="password">Password</label>
+        <input
+          id="password"
+          name="password"
+          type="text"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.password}
+          className="m-2"
+        />
+        {formik.touched.password && formik.errors.password ? (
+          <div>{formik.errors.password}</div>
         ) : null}
 
         <button className="btn btn-primary" type="submit">
