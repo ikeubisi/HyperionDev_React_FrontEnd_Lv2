@@ -8,7 +8,9 @@ export default function Counter() {
   const dispatch = useDispatch();
   return (
     <div className="counter">
-      <h1>Counter is: {state.heading}</h1>
+      <h1>
+        Counter is: {state.heading} {state.value}
+      </h1>
       <div className="btn-container">
         <Button variant="success" onClick={() => dispatch(increment())}>
           Increment by 1
