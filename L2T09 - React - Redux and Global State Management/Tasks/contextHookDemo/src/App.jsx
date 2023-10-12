@@ -1,6 +1,6 @@
 import { createContext } from "react";
-import "./App.css";
 import { useState } from "react";
+import "./App.css";
 
 // Create context
 const MyContext = createContext();
