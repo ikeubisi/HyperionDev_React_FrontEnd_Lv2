@@ -42,7 +42,7 @@ export default function Bank() {
         {state.balance > 0 && (
           <ButtonReusable
             onClick={() =>
-              dispatch({ type: "WITHDRAW" }, inputRef.current.valueOf)
+              dispatch({ type: "WITHDRAW", payload: inputRef.current.valueOf })
             }
             className={"btn btn-danger"}
           >
