@@ -1,11 +1,11 @@
 //store.js
 import { configureStore } from "@reduxjs/toolkit";
-import counterState from "./counterState";
+import todoState from "./todoState";
 import.meta.env;
 
 const store = configureStore({
   reducer: {
-    counter: counterState,
+    todo: todoState,
     // ...more reducers can be added here.
   },
   // other store option
