@@ -1,11 +1,11 @@
 export const initialState = {
   balance: 1000,
 };
-export const reducers = (state = initialState, action) => {
+export const reducers = (state = initialState, action, amount) => {
   if (action.type === "DEPOSIT") {
-    return { ...state, balance: state.balance + 10 };
+    return { ...state, balance: state.balance + amount };
   } else if (action.type === "WITHDRAW") {
-    return { ...state, balance: state.balance - 1 };
+    return { ...state, balance: state.balance - amount };
   } else if (action.type === "BANK_CHARGE") {
     // Balance amount should decrease by 15%
     return { ...state, balance: state.balance - state.balance * 0.15 };

@@ -1,10 +1,12 @@
-import { useReducer } from "react";
+import { useRef, useReducer } from "react";
 import { initialState, reducers } from "../GlobalState";
 import ButtonReusable from "./ButtonReusable";
 
 export default function Bank() {
   //Get access to use and update state
   const [state, dispatch] = useReducer(reducers, initialState);
+
+  const inputRef = useRef(0);
 
   // Convert balance into UK money format
   const currencyFormatter = new Intl.NumberFormat("en-UK", {
@@ -18,24 +20,29 @@ export default function Bank() {
       <h3>Bank Balance: {currencyFormatter.format(state.balance)}</h3>
       <div className="form-group">
         <input
-          type="number"
-          min={0}
-          placeholder="Enter Amount"
           className="form-control m-2"
           defaultValue={0}
+          min={0}
+          placeholder="Enter Amount"
+          ref={inputRef}
+          type="number"
         />
       </div>
       <hr />
       <div className="form-group">
         <ButtonReusable
-          onClick={() => dispatch({ type: "DEPOSIT" })}
+          onClick={() =>
+            dispatch({ type: "DEPOSIT" }, inputRef.current.valueOf)
+          }
           className={"btn btn-success"}
         >
           Deposit (+)
         </ButtonReusable>
         {state.balance > 0 && (
           <ButtonReusable
-            onClick={() => dispatch({ type: "WITHDRAW" })}
+            onClick={() =>
+              dispatch({ type: "WITHDRAW" }, inputRef.current.valueOf)
+            }
             className={"btn btn-danger"}
           >
             Widthdraw (-)
