@@ -3,9 +3,10 @@ import { initialState, reducers } from "../GlobalState";
 import ButtonReusable from "./ButtonReusable";
 
 export default function Bank() {
-  //Get access to use and update state
+  //Get access to use and update state globally
   const [state, dispatch] = useReducer(reducers, initialState);
 
+  // Grab value from input field
   const inputRef = useRef(0);
 
   // Convert balance into UK money format
@@ -46,7 +47,7 @@ export default function Bank() {
             }
             className={"btn btn-danger"}
           >
-            Widthdraw (-)
+            Withdraw (-)
           </ButtonReusable>
         )}
 
@@ -55,7 +56,7 @@ export default function Bank() {
             onClick={() => dispatch({ type: "BANK_CHARGE" })}
             className={"btn btn-warning"}
           >
-            Bank Charges -15%
+            Bank Charges 15%
           </ButtonReusable>
         )}
 

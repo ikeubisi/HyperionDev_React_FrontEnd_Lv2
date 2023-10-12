@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 ButtonReusable.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.string.isRequired,
   className: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
 };
