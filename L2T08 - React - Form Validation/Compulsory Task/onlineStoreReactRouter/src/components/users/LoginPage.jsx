@@ -33,7 +33,7 @@ export default function LoginPage() {
               type="email"
               placeholder="Enter Email"
               {...formik.getFieldProps("email")}
-              className="m-2"
+              className="form-control m-2"
             />
             {formik.touched.email && formik.errors.email ? (
               <div className="fw-bold text-danger mb-1">
@@ -50,7 +50,7 @@ export default function LoginPage() {
               type="password"
               placeholder="Password"
               {...formik.getFieldProps("password")}
-              className="m-2"
+              className="form-control m-2"
             />
             {formik.touched.password && formik.errors.password ? (
               <div className="fw-bold text-danger mb-1">

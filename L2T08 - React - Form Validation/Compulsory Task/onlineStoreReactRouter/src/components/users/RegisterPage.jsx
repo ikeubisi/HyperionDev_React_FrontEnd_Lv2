@@ -65,7 +65,7 @@ export default function RegisterPage() {
               // ...formik.getFieldProps() method returns to you the exact group of onChange,
               // onBlur, and value, checked for a given field
               {...formik.getFieldProps("firstName")}
-              className="m-2"
+              className="form-control m-2"
             />
             {formik.touched.firstName && formik.errors.firstName ? (
               <div className="fw-bold text-danger mb-1">
@@ -82,7 +82,7 @@ export default function RegisterPage() {
               type="text"
               placeholder="Last Name"
               {...formik.getFieldProps("lastName")}
-              className="m-2"
+              className="form-control m-2"
             />
             {formik.touched.lastName && formik.errors.lastName ? (
               <div className="fw-bold text-danger mb-1">
@@ -99,7 +99,7 @@ export default function RegisterPage() {
               type="email"
               placeholder="Enter Email"
               {...formik.getFieldProps("email")}
-              className="m-2"
+              className="form-control m-2"
             />
             {formik.touched.email && formik.errors.email ? (
               <div className="fw-bold text-danger mb-1">
@@ -116,7 +116,7 @@ export default function RegisterPage() {
               type="password"
               placeholder="Password"
               {...formik.getFieldProps("password")}
-              className="m-2"
+              className="form-control m-2"
             />
             {formik.touched.password && formik.errors.password ? (
               <div className="fw-bold text-danger mb-1">
@@ -133,7 +133,7 @@ export default function RegisterPage() {
               type="password"
               placeholder="Re-Enter Password"
               {...formik.getFieldProps("passwordConfirm")}
-              className="m-2"
+              className="form-control m-2"
             />
             {formik.touched.passwordConfirm && formik.errors.passwordConfirm ? (
               <div className="fw-bold text-danger mb-1">
