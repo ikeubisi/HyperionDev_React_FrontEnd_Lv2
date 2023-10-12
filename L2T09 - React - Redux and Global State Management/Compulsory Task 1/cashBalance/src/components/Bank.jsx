@@ -6,10 +6,16 @@ export default function Bank() {
   //Get access to use and update state
   const [state, dispatch] = useReducer(reducers, initialState);
 
+  // Convert balance into UK money format
+  const currencyFormatter = new Intl.NumberFormat("en-UK", {
+    style: "currency",
+    currency: "GBP",
+  });
+
   return (
     <div>
       <h1>Bank Display</h1>
-      <h3>Bank Balance: £{state.balance}</h3>
+      <h3>Bank Balance: {currencyFormatter.format(state.balance)}</h3>
       <div className="form-group">
         <input
           type="number"
@@ -19,28 +25,28 @@ export default function Bank() {
       </div>
       <div className="form-group">
         <ButtonReusable
-          onClick={() => dispatch({ type: "INCREMENT" })}
+          onClick={() => dispatch({ type: "DEPOSIT" })}
           className={"btn btn-success"}
         >
           Deposit (+)
         </ButtonReusable>
         <ButtonReusable
-          onClick={() => dispatch({ type: "INCREMENT" })}
+          onClick={() => dispatch({ type: "WITHDRAW" })}
           className={"btn btn-danger"}
         >
           Widthdraw (-)
         </ButtonReusable>
         <ButtonReusable
-          onClick={() => dispatch({ type: "INCREMENT" })}
+          onClick={() => dispatch({ type: "BANK_CHARGE" })}
           className={"btn btn-warning"}
         >
-          Bank Chargers (-)
+          Bank Chargers -£10
         </ButtonReusable>
         <ButtonReusable
-          onClick={() => dispatch({ type: "INCREMENT" })}
+          onClick={() => dispatch({ type: "INTEREST" })}
           className={"btn btn-info"}
         >
-          Add Interest (*)
+          Add Interest 10%
         </ButtonReusable>
       </div>
     </div>
