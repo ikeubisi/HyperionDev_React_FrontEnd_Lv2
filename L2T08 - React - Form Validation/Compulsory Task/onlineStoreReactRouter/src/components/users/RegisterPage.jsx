@@ -61,6 +61,7 @@ export default function RegisterPage() {
               id="firstName"
               name="firstName"
               type="text"
+              placeholder="First Name"
               // ...formik.getFieldProps() method returns to you the exact group of onChange,
               // onBlur, and value, checked for a given field
               {...formik.getFieldProps("firstName")}
@@ -79,6 +80,7 @@ export default function RegisterPage() {
               id="lastName"
               name="lastName"
               type="text"
+              placeholder="Last Name"
               {...formik.getFieldProps("lastName")}
               className="m-2"
             />
@@ -95,7 +97,7 @@ export default function RegisterPage() {
               id="email"
               name="email"
               type="email"
-              placeholder="e.g. bob@email.com"
+              placeholder="Enter Email"
               {...formik.getFieldProps("email")}
               className="m-2"
             />
@@ -112,6 +114,7 @@ export default function RegisterPage() {
               id="password"
               name="password"
               type="password"
+              placeholder="Password"
               {...formik.getFieldProps("password")}
               className="m-2"
             />
@@ -128,6 +131,7 @@ export default function RegisterPage() {
               id="passwordConfirm"
               name="passwordConfirm"
               type="password"
+              placeholder="Re-Enter Password"
               {...formik.getFieldProps("passwordConfirm")}
               className="m-2"
             />

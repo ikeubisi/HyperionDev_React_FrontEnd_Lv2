@@ -31,6 +31,7 @@ export default function LoginPage() {
               id="email"
               name="email"
               type="email"
+              placeholder="Enter Email"
               {...formik.getFieldProps("email")}
               className="m-2"
             />
@@ -47,6 +48,7 @@ export default function LoginPage() {
               id="password"
               name="password"
               type="password"
+              placeholder="Password"
               {...formik.getFieldProps("password")}
               className="m-2"
             />
