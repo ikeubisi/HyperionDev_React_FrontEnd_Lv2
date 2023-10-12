@@ -57,7 +57,9 @@ export default function Bank() {
           Add Interest 5%
         </ButtonReusable>
 
-        {state.balance < 0 && alert("You have run out of money!!!")}
+        {state.balance < 0 && (
+          <h3 className="text-danger fw-bold">You have run out of money!</h3>
+        )}
       </div>
     </div>
   );
