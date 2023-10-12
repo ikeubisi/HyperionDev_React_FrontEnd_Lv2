@@ -40,13 +40,13 @@ export default function Bank() {
           onClick={() => dispatch({ type: "BANK_CHARGE" })}
           className={"btn btn-warning"}
         >
-          Bank Chargers -£10
+          Bank Charges -15%
         </ButtonReusable>
         <ButtonReusable
           onClick={() => dispatch({ type: "INTEREST" })}
           className={"btn btn-info"}
         >
-          Add Interest 10%
+          Add Interest 5%
         </ButtonReusable>
       </div>
     </div>

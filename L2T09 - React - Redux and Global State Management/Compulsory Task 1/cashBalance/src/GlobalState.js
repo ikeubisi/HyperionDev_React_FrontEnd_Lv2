@@ -7,9 +7,11 @@ export const reducers = (state = initialState, action) => {
   } else if (action.type === "WITHDRAW") {
     return { ...state, balance: state.balance - 1 };
   } else if (action.type === "BANK_CHARGE") {
-    return { ...state, balance: state.balance - 10 };
+    // Balance amount should decrease by 15%
+    return { ...state, balance: state.balance - state.balance * 0.15 };
   } else if (action.type === "INTEREST") {
-    return { ...state, balance: state.balance + state.balance * 0.1 };
+    // Balance amount should increase by 5%
+    return { ...state, balance: state.balance + state.balance * 0.05 };
   }
   // If no action type matches, return the current state
   return state;
