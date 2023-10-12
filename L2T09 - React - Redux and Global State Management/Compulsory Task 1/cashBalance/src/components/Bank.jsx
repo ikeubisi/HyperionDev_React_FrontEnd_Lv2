@@ -21,8 +21,10 @@ export default function Bank() {
           type="number"
           placeholder="Enter Amount"
           className="form-control m-2"
+          defaultValue={0}
         />
       </div>
+      <hr />
       <div className="form-group">
         <ButtonReusable
           onClick={() => dispatch({ type: "DEPOSIT" })}
@@ -30,24 +32,32 @@ export default function Bank() {
         >
           Deposit (+)
         </ButtonReusable>
-        <ButtonReusable
-          onClick={() => dispatch({ type: "WITHDRAW" })}
-          className={"btn btn-danger"}
-        >
-          Widthdraw (-)
-        </ButtonReusable>
-        <ButtonReusable
-          onClick={() => dispatch({ type: "BANK_CHARGE" })}
-          className={"btn btn-warning"}
-        >
-          Bank Charges -15%
-        </ButtonReusable>
+        {state.balance > 0 && (
+          <ButtonReusable
+            onClick={() => dispatch({ type: "WITHDRAW" })}
+            className={"btn btn-danger"}
+          >
+            Widthdraw (-)
+          </ButtonReusable>
+        )}
+
+        {state.balance > 0 && (
+          <ButtonReusable
+            onClick={() => dispatch({ type: "BANK_CHARGE" })}
+            className={"btn btn-warning"}
+          >
+            Bank Charges -15%
+          </ButtonReusable>
+        )}
+
         <ButtonReusable
           onClick={() => dispatch({ type: "INTEREST" })}
           className={"btn btn-info"}
         >
           Add Interest 5%
         </ButtonReusable>
+
+        {state.balance < 0 && alert("You have run out of money!!!")}
       </div>
     </div>
   );
