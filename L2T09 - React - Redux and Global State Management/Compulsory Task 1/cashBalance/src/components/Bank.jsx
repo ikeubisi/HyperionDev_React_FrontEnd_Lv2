@@ -32,7 +32,8 @@ export default function Bank() {
       <div className="form-group">
         <ButtonReusable
           onClick={() =>
-            dispatch({ type: "DEPOSIT" }, inputRef.current.valueOf)
+            // Use payload to hold value of input field
+            dispatch({ type: "DEPOSIT", payload: inputRef.current.valueOf })
           }
           className={"btn btn-success"}
         >
