@@ -19,6 +19,7 @@ export default function Bank() {
       <div className="form-group">
         <input
           type="number"
+          min={0}
           placeholder="Enter Amount"
           className="form-control m-2"
           defaultValue={0}
