@@ -1,4 +1,5 @@
 export const initialState = {
+  // Start with money in the account
   balance: 1000,
 };
 export const reducers = (state = initialState, action) => {

@@ -33,7 +33,7 @@ export default function Bank() {
         <ButtonReusable
           onClick={() =>
             // Use payload to hold value of input field
-            dispatch({ type: "DEPOSIT", payload: inputRef.current.valueOf })
+            dispatch({ type: "DEPOSIT", payload: inputRef.current.value })
           }
           className={"btn btn-success"}
         >
@@ -42,7 +42,7 @@ export default function Bank() {
         {state.balance > 0 && (
           <ButtonReusable
             onClick={() =>
-              dispatch({ type: "WITHDRAW", payload: inputRef.current.valueOf })
+              dispatch({ type: "WITHDRAW", payload: inputRef.current.value })
             }
             className={"btn btn-danger"}
           >
