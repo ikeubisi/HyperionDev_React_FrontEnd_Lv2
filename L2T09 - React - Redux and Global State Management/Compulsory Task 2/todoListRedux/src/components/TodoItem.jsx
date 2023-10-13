@@ -29,8 +29,11 @@ const TodoItem = ({ id, content, completed }) => {
           checked={completed}
           onChange={handleCompleteClick}
         ></input>
-        {content}
-        <button className="btn btn-secondary">Edit</button>
+        <input type="text" value={content} />
+        {/* Edit button only available if todo is not completed */}
+        {completed === false && (
+          <button className="btn btn-secondary">Edit</button>
+        )}
         <button onClick={handleDeleteClick} className="btn btn-danger">
           Delete
         </button>
