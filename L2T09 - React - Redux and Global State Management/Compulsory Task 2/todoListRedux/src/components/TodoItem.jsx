@@ -32,6 +32,7 @@ const TodoItem = ({ id, content, completed }) => {
           ></input>
           {content}
         </span>
+        <span>{id}</span>
         <button onClick={handleDeleteClick} className="btn btn-danger">
           Delete
         </button>
