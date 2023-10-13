@@ -2,8 +2,8 @@ import TodoItem from "./TodoItem";
 
 const TodoList = () => {
   const todos = [
-    { id: 3, content: "Content3", completed: false },
     { id: 4, content: "Content4", completed: false },
+    { id: 5, content: "Content5", completed: false },
   ];
 
   return (
@@ -12,7 +12,7 @@ const TodoList = () => {
         <TodoItem
           key={crypto.randomUUID()}
           id={todo.id}
-          title={todo.title}
+          content={todo.content}
           completed={todo.completed}
         />
       ))}

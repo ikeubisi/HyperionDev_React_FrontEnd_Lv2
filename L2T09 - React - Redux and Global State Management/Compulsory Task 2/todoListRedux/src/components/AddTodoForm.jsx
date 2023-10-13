@@ -1,11 +1,22 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+// Where all the CRUD actions are
+import { addTodo } from "../store/todoSlice";
 
 const AddTodoForm = () => {
   const [value, setValue] = useState("");
 
+  // Dispatch is the only way to update the store
+  const dispatch = useDispatch();
+
   const onSubmit = (event) => {
     event.preventDefault();
+    dispatch(
+      addTodo({
+        // Value users types into form ends up here
+        content: value,
+      })
+    );
   };
 
   return (

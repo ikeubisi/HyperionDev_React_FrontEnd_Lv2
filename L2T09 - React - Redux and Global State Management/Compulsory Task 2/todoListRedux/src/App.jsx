@@ -5,6 +5,7 @@ import store from "./store/store";
 import Header from "./components/layout/Header";
 import TodoCounter from "./components/TodoCounter";
 import TodoList from "./components/TodoList";
+import AddTodoForm from "./components/AddTodoForm";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Provider store={store}>
         <Header />
         <TodoCounter />
+        <AddTodoForm />
         <TodoList />
       </Provider>
     </div>

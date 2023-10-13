@@ -12,8 +12,9 @@ let todoId = crypto.randomUUID();
 const todoSlice = createSlice({
   name: "todos",
   initialState: [
-    { id: 1, content: "Content1", completed: false },
-    { id: 2, content: "Content2", completed: false },
+    { id: 1, content: "Content1", completed: true },
+    { id: 2, content: "Content1", completed: false },
+    { id: 3, content: "Content2", completed: false },
   ],
   // CRUD functionality
   reducers: {
