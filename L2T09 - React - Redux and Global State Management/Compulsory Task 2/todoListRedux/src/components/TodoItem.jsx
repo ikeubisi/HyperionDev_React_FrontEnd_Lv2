@@ -15,6 +15,8 @@ const TodoItem = ({ id, content, completed }) => {
     dispatch(deleteTodo({ id: id }));
   };
 
+  const handleEditClick = () => {};
+
   return (
     // Fade out the completed todo and use bootstrap success color
     <li
@@ -29,10 +31,12 @@ const TodoItem = ({ id, content, completed }) => {
           checked={completed}
           onChange={handleCompleteClick}
         ></input>
-        <input type="text" value={content} />
+        <input type="text" defaultValue={content} />
         {/* Edit button only available if todo is not completed */}
         {completed === false && (
-          <button className="btn btn-secondary">Edit</button>
+          <button onClick={handleEditClick} className="btn btn-secondary">
+            Edit
+          </button>
         )}
         <button onClick={handleDeleteClick} className="btn btn-danger">
           Delete
@@ -43,7 +47,7 @@ const TodoItem = ({ id, content, completed }) => {
 };
 
 TodoItem.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
 };

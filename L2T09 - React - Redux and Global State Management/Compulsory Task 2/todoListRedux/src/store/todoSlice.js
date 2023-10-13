@@ -7,9 +7,9 @@ import { createSlice } from "@reduxjs/toolkit";
 const todoSlice = createSlice({
   name: "todos",
   initialState: [
-    { id: 1, content: "Content1", completed: true },
-    { id: 2, content: "Content2", completed: false },
-    { id: 3, content: "Content3", completed: false },
+    { id: "1", content: "Content1", completed: true },
+    { id: "2", content: "Content2", completed: false },
+    { id: "3", content: "Content3", completed: false },
   ],
 
   // Add, Edit, Delete, Completed toggle
@@ -35,6 +35,13 @@ const todoSlice = createSlice({
       // Use filter function to remove only todo from array that we have chosen to delete
       // filter function will return us a new array
       return state.filter((todo) => todo.id !== action.payload.id);
+    },
+    // Edit Todo
+    editTodo: (state, action) => {
+      // Find id of Todo to target
+      const index = state.findIndex((todo) => todo.id === action.payload.id);
+      // Get todo at specific position
+      state[index].content = action.payload.content;
     },
   },
 });
