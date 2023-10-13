@@ -13,16 +13,22 @@ const AddTodoForm = () => {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    dispatch(
-      addTodo({
-        // Create unique id for keys & targeting todos for editing learned from
-        // Stop using the UUID Library in JavaScript (2022) YouTube.
-        // Available at: https://www.youtube.com/watch?v=cutfiIgyRao (Accessed: 13 October 2023).
-        id: crypto.randomUUID(),
-        // Value users types into form ends up here
-        content: value,
-      })
-    );
+
+    if (inputRef.current.value.length > 0) {
+      dispatch(
+        addTodo({
+          // Create unique id for keys & targeting todos for editing learned from
+          // Stop using the UUID Library in JavaScript (2022) YouTube.
+          // Available at: https://www.youtube.com/watch?v=cutfiIgyRao (Accessed: 13 October 2023).
+          id: crypto.randomUUID(),
+          // Value users types into form ends up here
+          content: value,
+        })
+      );
+    } else {
+      alert("You cannot have an empty todo");
+    }
+
     inputRef.current.value = "";
   };
 
@@ -39,9 +45,11 @@ const AddTodoForm = () => {
         onChange={(event) => setValue(event.target.value)}
       ></input>
 
-      <button type="submit" className="btn btn-primary mb-2">
-        Add todo
-      </button>
+      {inputRef.current.value.length > 0 && (
+        <button type="submit" className="btn btn-primary mb-2">
+          Add todo
+        </button>
+      )}
     </form>
   );
 };
