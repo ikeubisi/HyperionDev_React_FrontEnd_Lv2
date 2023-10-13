@@ -11,7 +11,12 @@ const TodoItem = ({ id, content, completed }) => {
   };
 
   return (
-    <li className={`list-group-item ${completed && "list-group-item-success"}`}>
+    // Fade out the completed todo and use bootstrap success color
+    <li
+      className={`list-group-item ${
+        completed && "list-group-item-success opacity-50"
+      }`}
+    >
       <div className="d-flex justify-content-between">
         <span className="d-flex align-items-center">
           <input

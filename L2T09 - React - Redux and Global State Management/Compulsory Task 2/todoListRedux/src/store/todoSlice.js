@@ -4,7 +4,7 @@
 
 import { createSlice } from "@reduxjs/toolkit";
 
-// Create new id for keys learned from
+// Create unique id for keys & targeting todos for editing learned from
 // Stop using the UUID Library in JavaScript (2022) YouTube.
 // Available at: https://www.youtube.com/watch?v=cutfiIgyRao (Accessed: 13 October 2023).
 let todoId = crypto.randomUUID();
