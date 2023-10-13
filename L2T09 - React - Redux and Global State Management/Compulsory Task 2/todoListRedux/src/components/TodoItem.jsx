@@ -23,16 +23,14 @@ const TodoItem = ({ id, content, completed }) => {
       }`}
     >
       <div className="d-flex justify-content-between">
-        <span className="d-flex align-items-center">
-          <input
-            type="checkbox"
-            className="mr-3"
-            checked={completed}
-            onChange={handleCompleteClick}
-          ></input>
-          {content}
-        </span>
-        <span>{id}</span>
+        <input
+          type="checkbox"
+          className="mr-3"
+          checked={completed}
+          onChange={handleCompleteClick}
+        ></input>
+        {content}
+        <button className="btn btn-secondary">Edit</button>
         <button onClick={handleDeleteClick} className="btn btn-danger">
           Delete
         </button>
