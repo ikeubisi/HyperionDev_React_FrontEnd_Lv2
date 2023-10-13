@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const TodoItem = ({ id, content, completed }) => {
+const TodoItem = ({ content, completed }) => {
   return (
     <li className={`list-group-item ${completed && "list-group-item-success"}`}>
       <div className="d-flex justify-content-between">
