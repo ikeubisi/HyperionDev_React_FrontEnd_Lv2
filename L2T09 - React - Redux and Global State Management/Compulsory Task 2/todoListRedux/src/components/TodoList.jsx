@@ -10,6 +10,7 @@ const TodoList = () => {
       {todos.map((todo) => (
         <TodoItem
           key={todo.id}
+          id={todo.id}
           content={todo.content}
           completed={todo.completed}
         />

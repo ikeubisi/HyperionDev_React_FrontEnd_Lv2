@@ -37,11 +37,16 @@ const todoSlice = createSlice({
       state.push(newTodo);
     },
     // Completed Toggle Todo
-    toggleComplete: (state, action) => {},
+    toggleComplete: (state, action) => {
+      // Find id of Todo to target
+      const index = state.findIndex((todo) => todo.id === action.payload.id);
+      // Get todo at specific position
+      state[index].completed = action.payload.completed;
+    },
   },
 });
 
-export const { addTodo } = todoSlice.actions;
+export const { addTodo, toggleComplete } = todoSlice.actions;
 
 // store.js needs this
 export default todoSlice.reducer;
