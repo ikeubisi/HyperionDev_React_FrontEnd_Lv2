@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-// Where all the CRUD actions are
+// Where all the Add, Edit, Delete, Completed actions are
 import { addTodo } from "../store/todoSlice";
 
 const AddTodoForm = () => {

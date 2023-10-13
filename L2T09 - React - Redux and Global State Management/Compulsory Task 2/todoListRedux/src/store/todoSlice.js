@@ -24,7 +24,8 @@ const todoSlice = createSlice({
     { id: 10, content: "Content10", completed: false },
     { id: 11, content: "Content11", completed: false },
   ],
-  // CRUD functionality
+
+  // Add, Edit, Delete, Completed toggle
   reducers: {
     // ADD Todo
     addTodo: (state, action) => {
@@ -35,7 +36,7 @@ const todoSlice = createSlice({
       };
       state.push(newTodo);
     },
-    // EDIT Todo
+    // Completed Toggle Todo
     toggleComplete: (state, action) => {},
   },
 });
