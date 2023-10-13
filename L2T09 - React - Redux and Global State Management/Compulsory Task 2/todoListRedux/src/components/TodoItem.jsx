@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
-import { toggleComplete, deleteTodo } from "../store/todoSlice";
+import { toggleComplete, deleteTodo, editTodo } from "../store/todoSlice";
 
 const TodoItem = ({ id, content, completed }) => {
   const dispatch = useDispatch();
@@ -15,7 +15,9 @@ const TodoItem = ({ id, content, completed }) => {
     dispatch(deleteTodo({ id: id }));
   };
 
-  const handleEditClick = () => {};
+  const handleEditClick = () => {
+    dispatch(editTodo({ id, content }));
+  };
 
   return (
     // Fade out the completed todo and use bootstrap success color

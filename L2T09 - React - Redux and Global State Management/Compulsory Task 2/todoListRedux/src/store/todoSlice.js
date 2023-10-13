@@ -47,7 +47,8 @@ const todoSlice = createSlice({
 });
 
 // Export actions so out buttons can use them
-export const { addTodo, toggleComplete, deleteTodo } = todoSlice.actions;
+export const { addTodo, toggleComplete, deleteTodo, editTodo } =
+  todoSlice.actions;
 
 // store.js needs this
 export default todoSlice.reducer;

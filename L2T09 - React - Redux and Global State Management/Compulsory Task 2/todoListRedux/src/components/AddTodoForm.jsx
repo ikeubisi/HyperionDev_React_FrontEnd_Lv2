@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 // Where all the Add, Edit, Delete, Completed actions are
 import { addTodo } from "../store/todoSlice";
 
 const AddTodoForm = () => {
   const [value, setValue] = useState("");
+
+  const inputRef = useRef("");
 
   // Dispatch is the only way to update the store
   const dispatch = useDispatch();
@@ -21,6 +23,7 @@ const AddTodoForm = () => {
         content: value,
       })
     );
+    inputRef.current.value = "";
   };
 
   return (
@@ -28,6 +31,7 @@ const AddTodoForm = () => {
       {/* <label className="sr-only">Todo Task</label> */}
       <h4>Add Todo to list</h4>
       <input
+        ref={inputRef}
         type="text"
         className="form-control mb-2 mr-sm-2"
         placeholder="Add todo"
