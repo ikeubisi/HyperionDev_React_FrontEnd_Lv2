@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import store from "./store/store";
 import Header from "./components/layout/Header";
 import TodoCounter from "./components/TodoCounter";
+import TodoList from "./components/TodoList";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Provider store={store}>
         <Header />
         <TodoCounter />
+        <TodoList />
       </Provider>
     </div>
   );
