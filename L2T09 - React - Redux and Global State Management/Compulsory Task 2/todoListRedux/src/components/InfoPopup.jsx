@@ -41,7 +41,7 @@ const InfoPopup = () => {
                 data-bs-target="#exampleModalToggle2"
                 data-bs-toggle="modal"
               >
-                Show More Info
+                Show More Info <i className="fa-solid fa-arrow-right fa-sm"></i>
               </button>
             </div>
           </div>
@@ -80,7 +80,8 @@ const InfoPopup = () => {
                 data-bs-target="#exampleModalToggle"
                 data-bs-toggle="modal"
               >
-                Back To Main Info
+                Back To Main Info{" "}
+                <i className="fa-solid fa-arrow-left fa-sm"></i>
               </button>
             </div>
           </div>
@@ -93,7 +94,7 @@ const InfoPopup = () => {
           href="#exampleModalToggle"
           role="button"
         >
-          Show Info
+          Show Info <i className="fa-solid fa-question fa-sm"></i>
         </a>
       </div>
     </>
