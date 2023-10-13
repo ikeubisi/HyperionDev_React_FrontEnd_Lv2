@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 
 const TodoCounter = () => {
-  // Grab todos from store
+  // Grab todos from store, "state" means all state so we need to specify todos
   let todosCount = useSelector((state) => state.todos.length);
 
   return (

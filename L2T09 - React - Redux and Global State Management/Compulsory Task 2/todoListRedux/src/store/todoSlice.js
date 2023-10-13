@@ -35,6 +35,8 @@ const todoSlice = createSlice({
       };
       state.push(newTodo);
     },
+    // EDIT Todo
+    toggleComplete: (state, action) => {},
   },
 });
 
