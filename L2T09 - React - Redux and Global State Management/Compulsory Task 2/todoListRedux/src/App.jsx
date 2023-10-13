@@ -7,7 +7,7 @@ import TodoCounter from "./components/TodoCounter";
 import TodoList from "./components/TodoList";
 import AddTodoForm from "./components/AddTodoForm";
 
-// Vast majority of Todo List creation code via React & Redux learned from
+// Majority of Todo List Add/Delete/Completed creation code via React & Redux learned from
 // React redux todo app tutorial | learn redux with redux toolkit (2021) YouTube.
 // Available at: https://www.youtube.com/watch?v=fiesH6WU63I (Accessed: 13 October 2023).
 

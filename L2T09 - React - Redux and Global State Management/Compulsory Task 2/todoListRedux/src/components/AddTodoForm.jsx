@@ -21,7 +21,8 @@ const AddTodoForm = () => {
 
   return (
     <form onSubmit={onSubmit} className="form-inline mt-3 mb-3">
-      <label className="sr-only">Todo Task</label>
+      {/* <label className="sr-only">Todo Task</label> */}
+      <h4>Add Todo to list</h4>
       <input
         type="text"
         className="form-control mb-2 mr-sm-2"
@@ -31,7 +32,7 @@ const AddTodoForm = () => {
       ></input>
 
       <button type="submit" className="btn btn-primary mb-2">
-        Submit
+        Add todo
       </button>
     </form>
   );
