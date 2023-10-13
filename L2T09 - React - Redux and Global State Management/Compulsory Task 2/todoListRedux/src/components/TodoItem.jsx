@@ -1,9 +1,12 @@
 import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
 import { toggleComplete, deleteTodo, editTodo } from "../store/todoSlice";
+import { useState } from "react";
 
 const TodoItem = ({ id, content, completed }) => {
   const dispatch = useDispatch();
+
+  const [editedTodo, setEditedTodo] = useState("");
 
   const handleCompleteClick = () => {
     // Pass opposite of whatever current completed value is for toggle effect
