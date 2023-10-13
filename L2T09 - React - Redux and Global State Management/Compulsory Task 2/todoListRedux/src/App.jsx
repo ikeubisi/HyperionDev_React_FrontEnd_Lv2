@@ -6,6 +6,7 @@ import Header from "./components/layout/Header";
 import TodoCounter from "./components/TodoCounter";
 import TodoList from "./components/TodoList";
 import AddTodoForm from "./components/AddTodoForm";
+import InfoPopup from "./components/InfoPopup";
 
 // Majority of Todo List Add/Delete/Completed creation code via React & Redux learned from
 // React redux todo app tutorial | learn redux with redux toolkit (2021) YouTube.
@@ -17,6 +18,7 @@ function App() {
       <Provider store={store}>
         <Header />
         <TodoCounter />
+        <InfoPopup />
         <AddTodoForm />
         <TodoList />
       </Provider>
