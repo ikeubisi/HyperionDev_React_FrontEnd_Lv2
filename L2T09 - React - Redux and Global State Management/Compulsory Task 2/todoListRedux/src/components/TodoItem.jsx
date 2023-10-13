@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
-import { toggleComplete } from "../store/todoSlice";
+import { toggleComplete, deleteTodo } from "../store/todoSlice";
 
 const TodoItem = ({ id, content, completed }) => {
   const dispatch = useDispatch();
@@ -8,6 +8,11 @@ const TodoItem = ({ id, content, completed }) => {
   const handleCompleteClick = () => {
     // Pass opposite of whatever current completed value is for toggle effect
     dispatch(toggleComplete({ id: id, completed: !completed }));
+  };
+
+  const handleDeleteClick = () => {
+    // Pass in id as payload so correct todo is deleted
+    dispatch(deleteTodo({ id: id }));
   };
 
   return (
@@ -27,7 +32,9 @@ const TodoItem = ({ id, content, completed }) => {
           ></input>
           {content}
         </span>
-        <button className="btn btn-danger">Delete</button>
+        <button onClick={handleDeleteClick} className="btn btn-danger">
+          Delete
+        </button>
       </div>
     </li>
   );

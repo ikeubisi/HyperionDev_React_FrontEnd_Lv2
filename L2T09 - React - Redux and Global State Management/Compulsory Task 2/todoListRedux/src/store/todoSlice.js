@@ -27,7 +27,7 @@ const todoSlice = createSlice({
 
   // Add, Edit, Delete, Completed toggle
   reducers: {
-    // ADD Todo
+    // Add Todo
     addTodo: (state, action) => {
       const newTodo = {
         id: todoId,
@@ -43,10 +43,17 @@ const todoSlice = createSlice({
       // Get todo at specific position
       state[index].completed = action.payload.completed;
     },
+    // Delete Todo
+    deleteTodo: (state, action) => {
+      // Use filter function to remove only todo from array that we have chosen to delete
+      // filter function will return us a new array
+      return state.filter((todo) => todo.id !== action.payload.id);
+    },
   },
 });
 
-export const { addTodo, toggleComplete } = todoSlice.actions;
+// Export actions so out buttons can use them
+export const { addTodo, toggleComplete, deleteTodo } = todoSlice.actions;
 
 // store.js needs this
 export default todoSlice.reducer;
