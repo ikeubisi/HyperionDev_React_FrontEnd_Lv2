@@ -70,9 +70,13 @@ const InfoPopup = () => {
             <div className="modal-body">
               <p>
                 At the top you can see a total of how many complete and
-                incomplete tasks exist.
+                incomplete todos exist.
               </p>
               <p>You cannot edit a todo that is already set to completed.</p>
+              <p>
+                You must write a todo first before the &apos;Add todo&apos;
+                button shows.
+              </p>
             </div>
             <div className="modal-footer">
               <button

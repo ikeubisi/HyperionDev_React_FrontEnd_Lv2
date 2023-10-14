@@ -34,7 +34,6 @@ const AddTodoForm = () => {
 
   return (
     <form onSubmit={onSubmit} className="form-inline mt-3 mb-3">
-      {/* <label className="sr-only">Todo Task</label> */}
       <h4>Add Todo to list</h4>
       <input
         ref={inputRef}
@@ -45,7 +44,8 @@ const AddTodoForm = () => {
         onChange={(event) => setValue(event.target.value)}
       ></input>
 
-      {inputRef.current.value.length > 0 && (
+      {/* Only show create button if we have a todo to add */}
+      {inputRef.current.value && (
         <button type="submit" className="btn btn-primary mb-2">
           Add todo
         </button>
