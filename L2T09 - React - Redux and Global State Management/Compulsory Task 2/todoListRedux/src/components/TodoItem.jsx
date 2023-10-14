@@ -22,7 +22,7 @@ const TodoItem = ({ id, content, completed }) => {
   };
 
   const handleEditClick = () => {
-    dispatch(editTodo({ id, content }));
+    dispatch(editTodo({ id: id, content: editedTodo }));
   };
 
   return (
@@ -39,7 +39,13 @@ const TodoItem = ({ id, content, completed }) => {
           checked={completed}
           onChange={handleCompleteClick}
         ></input>
-        <input type="text" defaultValue={content} />
+        <input
+          type="text"
+          onChange={(event) => {
+            setEditedTodo(event.target.value);
+          }}
+          defaultValue={content}
+        />
         {/* Edit button only available if todo is not completed */}
         {completed === false && (
           <button onClick={handleEditClick} className="btn btn-secondary">

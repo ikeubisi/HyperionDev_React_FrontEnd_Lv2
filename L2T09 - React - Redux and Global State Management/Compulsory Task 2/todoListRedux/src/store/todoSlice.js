@@ -1,7 +1,3 @@
-// Todo List creation learned from
-// React redux todo app tutorial | learn redux with redux toolkit (2021) YouTube.
-// Available at: https://www.youtube.com/watch?v=fiesH6WU63I (Accessed: 13 October 2023).
-
 import { createSlice } from "@reduxjs/toolkit";
 
 const todoSlice = createSlice({
@@ -11,6 +7,14 @@ const todoSlice = createSlice({
     { id: "2", content: "Content2", completed: false },
     { id: "3", content: "Content3", completed: false },
   ],
+
+  // Todo List creation Add, Delete and Completed learned from
+  // React redux todo app tutorial | learn redux with redux toolkit (2021) YouTube.
+  // Available at: https://www.youtube.com/watch?v=fiesH6WU63I (Accessed: 13 October 2023).
+
+  // Todo item Edit learned from
+  // Redux crud tutorial in react - redux toolkit tutorial (2022) YouTube.
+  // Available at: https://youtu.be/bml92jhF4t8?feature=shared&amp;t=2370 (Accessed: 13 October 2023).
 
   // Add, Edit, Delete, Completed toggle
   reducers: {
@@ -38,10 +42,13 @@ const todoSlice = createSlice({
     },
     // Edit Todo
     editTodo: (state, action) => {
-      // Find id of Todo to target
-      const index = state.findIndex((todo) => todo.id === action.payload.id);
-      // Get todo at specific position
-      state[index].content = action.payload.content;
+      state.value.map((todo) => {
+        // Find id of Todo to target
+        if (todo.id === action.payload.id) {
+          // Change the content in todo
+          todo.content = action.payload.content;
+        }
+      });
     },
   },
 });
