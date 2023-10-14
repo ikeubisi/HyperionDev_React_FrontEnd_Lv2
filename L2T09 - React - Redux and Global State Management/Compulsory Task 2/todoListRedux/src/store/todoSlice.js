@@ -42,10 +42,10 @@ const todoSlice = createSlice({
     },
     // Edit Todo
     editTodo: (state, action) => {
-      state.value.map((todo) => {
-        // Find id of Todo to target
+      state.forEach((todo) => {
+        // Find unique id of Todo to target
         if (todo.id === action.payload.id) {
-          // Change the content in todo
+          // Change the content in todo (state gets mutated)
           todo.content = action.payload.content;
         }
       });
