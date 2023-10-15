@@ -14,7 +14,7 @@ const TodoList = () => {
           content={todo.content}
           completed={todo.completed}
         />
-      ))}
+      )) || <h3>Loading ...</h3>}
     </ul>
   );
 };
