@@ -12,10 +12,6 @@ const todoSlice = createSlice({
   // React redux todo app tutorial | learn redux with redux toolkit (2021) YouTube.
   // Available at: https://www.youtube.com/watch?v=fiesH6WU63I (Accessed: 13 October 2023).
 
-  // Todo item Edit learned from
-  // Redux crud tutorial in react - redux toolkit tutorial (2022) YouTube.
-  // Available at: https://youtu.be/bml92jhF4t8?feature=shared&amp;t=2370 (Accessed: 13 October 2023).
-
   // Add, Edit, Delete, Completed toggle
   reducers: {
     // Add Todo
@@ -40,7 +36,12 @@ const todoSlice = createSlice({
       // filter function will return us a new array
       return state.filter((todo) => todo.id !== action.payload.id);
     },
-    // Edit Todo
+
+    // Todo item Edit learned from
+    // Redux crud tutorial in react - redux toolkit tutorial (2022) YouTube.
+    // Available at: https://youtu.be/bml92jhF4t8?feature=shared&amp;t=2370 (Accessed: 13 October 2023).
+
+    // Edit Todo (would deal with PUT rather than PATCH requests in a real site)
     editTodo: (state, action) => {
       state.forEach((todo) => {
         // Find unique id of Todo to target

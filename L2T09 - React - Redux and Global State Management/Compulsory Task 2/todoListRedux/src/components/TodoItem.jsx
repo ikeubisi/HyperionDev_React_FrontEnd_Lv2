@@ -39,6 +39,10 @@ const TodoItem = ({ id, content, completed }) => {
           checked={completed}
           onChange={handleCompleteClick}
         ></input>
+        {content}
+
+        {/* REMOVE THIS COMMENT LATER Put this input field in a bootstrap modal, use a link to open it.
+        Later put it into its own component */}
         <input
           type="text"
           onChange={(event) => {
