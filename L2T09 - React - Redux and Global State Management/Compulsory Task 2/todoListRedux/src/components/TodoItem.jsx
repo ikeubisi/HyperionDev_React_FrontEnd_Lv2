@@ -72,13 +72,14 @@ const TodoItem = ({ id, content, completed }) => {
               className="m-2"
             />
             {/* Edit button only available if todo is not completed and an actual edit has been done*/}
-            {completed === false && editedTodo.length > 0 && (
+            {completed === false && editedTodo.length > 0 ? (
               <Button onClick={handleEditClick} variant="warning">
                 Update
               </Button>
-            )}
-            {completed === false && editedTodo.length === 0 && (
-              <p>Please Edit the field or Close</p>
+            ) : (
+              <p>
+                Please Edit the field or Close. The field must not be blank.
+              </p>
             )}
           </Modal.Body>
           <Modal.Footer>
