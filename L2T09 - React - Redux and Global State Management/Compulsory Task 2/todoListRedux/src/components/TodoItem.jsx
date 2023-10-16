@@ -2,8 +2,15 @@ import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
 import { toggleComplete, deleteTodo, editTodo } from "../store/todoSlice";
 import { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 
 const TodoItem = ({ id, content, completed }) => {
+  // React Bootstrap Modal content
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   const dispatch = useDispatch();
 
   // Todo item editing learned from
@@ -39,23 +46,41 @@ const TodoItem = ({ id, content, completed }) => {
           checked={completed}
           onChange={handleCompleteClick}
         ></input>
+
         {content}
 
-        {/* REMOVE THIS COMMENT LATER Put this input field in a bootstrap modal, use a link to open it.
-        Later put it into its own component */}
-        <input
-          type="text"
-          onChange={(event) => {
-            setEditedTodo(event.target.value);
-          }}
-          defaultValue={content}
-        />
-        {/* Edit button only available if todo is not completed */}
-        {completed === false && (
-          <button onClick={handleEditClick} className="btn btn-secondary">
-            Edit
-          </button>
-        )}
+        {/* Edit modal */}
+        <Button variant="warning" onClick={handleShow}>
+          Edit Todo
+        </Button>
+
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Edit Todo</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <input
+              type="text"
+              onChange={(event) => {
+                setEditedTodo(event.target.value);
+              }}
+              defaultValue={content}
+              className="m-2"
+            />
+            {/* Edit button only available if todo is not completed */}
+            {completed === false && (
+              <Button onClick={handleEditClick} variant="warning">
+                Update
+              </Button>
+            )}
+          </Modal.Body>
+          <Modal.Footer>
+            <Button onClick={handleClose} variant="secondary">
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
+
         <button onClick={handleDeleteClick} className="btn btn-danger">
           Delete
         </button>
