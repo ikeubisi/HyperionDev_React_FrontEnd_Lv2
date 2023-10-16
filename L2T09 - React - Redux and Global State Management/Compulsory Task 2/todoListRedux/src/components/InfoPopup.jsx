@@ -9,10 +9,10 @@ const InfoPopup = () => {
       https://github.com/markpackham/Hyperiondev-JavaScript-2023-Revise/blob/master/1%20-%20JavaScript%20Programming/L1T14%20-%20Capstone%20Project%20-%20Build%20Your%20Developer%20Portfolio/capstone_project/portfolio/html/about.html
       */}
       <div
-        className="modal fade"
-        id="exampleModalToggle"
         aria-hidden="true"
         aria-labelledby="exampleModalToggleLabel"
+        className="modal fade"
+        id="exampleModalToggle"
         tabIndex="-1"
       >
         <div className="modal-dialog modal-dialog-centered">
@@ -22,10 +22,10 @@ const InfoPopup = () => {
                 Info
               </h5>
               <button
-                type="button"
+                aria-label="Close"
                 className="btn-close"
                 data-bs-dismiss="modal"
-                aria-label="Close"
+                type="button"
               ></button>
             </div>
             <div className="modal-body">
@@ -61,10 +61,10 @@ const InfoPopup = () => {
                 More Info
               </h5>
               <button
-                type="button"
+                aria-label="Close"
                 className="btn-close"
                 data-bs-dismiss="modal"
-                aria-label="Close"
+                type="button"
               ></button>
             </div>
             <div className="modal-body">

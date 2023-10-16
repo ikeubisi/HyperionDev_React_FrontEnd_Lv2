@@ -1,11 +1,11 @@
-import PropTypes from "prop-types";
-import { useDispatch } from "react-redux";
-import { toggleComplete, deleteTodo, editTodo } from "../store/todoSlice";
-import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import PropTypes from "prop-types";
+import { useDispatch } from "react-redux";
+import { useState } from "react";
+import { deleteTodo, editTodo, toggleComplete } from "../store/todoSlice";
 
-const TodoItem = ({ id, content, completed }) => {
+const TodoItem = ({ completed, content, id }) => {
   const dispatch = useDispatch();
 
   // React Bootstrap Modal values
@@ -33,7 +33,7 @@ const TodoItem = ({ id, content, completed }) => {
   };
 
   return (
-    // Fade out the completed todo and use bootstrap success color
+    // Fade out the completed todo via opacity and use bootstrap success color
     <li
       className={`list-group-item ${
         completed && "list-group-item-success opacity-50"
@@ -98,9 +98,9 @@ const TodoItem = ({ id, content, completed }) => {
 };
 
 TodoItem.propTypes = {
-  id: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
+  content: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default TodoItem;

@@ -12,9 +12,8 @@ const todoSlice = createSlice({
   // React redux todo app tutorial | learn redux with redux toolkit (2021) YouTube.
   // Available at: https://www.youtube.com/watch?v=fiesH6WU63I (Accessed: 13 October 2023).
 
-  // Add, Edit, Delete, Completed toggle
+  // Add Todo, Delete Todo, Edit Todo & Toggle Complete
   reducers: {
-    // Add Todo
     addTodo: (state, action) => {
       const newTodo = {
         id: action.payload.id,
@@ -23,13 +22,7 @@ const todoSlice = createSlice({
       };
       state.push(newTodo);
     },
-    // Completed Toggle Todo
-    toggleComplete: (state, action) => {
-      // Find id of Todo to target
-      const index = state.findIndex((todo) => todo.id === action.payload.id);
-      // Get todo at specific position
-      state[index].completed = action.payload.completed;
-    },
+
     // Delete Todo
     deleteTodo: (state, action) => {
       // Use filter function to remove only todo from array that we have chosen to delete
@@ -51,11 +44,19 @@ const todoSlice = createSlice({
         }
       });
     },
+
+    // Completed Toggle Todo
+    toggleComplete: (state, action) => {
+      // Find id of Todo to target
+      const index = state.findIndex((todo) => todo.id === action.payload.id);
+      // Get todo at specific position
+      state[index].completed = action.payload.completed;
+    },
   },
 });
 
 // Export actions so out buttons can use them
-export const { addTodo, toggleComplete, deleteTodo, editTodo } =
+export const { addTodo, deleteTodo, editTodo, toggleComplete } =
   todoSlice.actions;
 
 // store.js needs this

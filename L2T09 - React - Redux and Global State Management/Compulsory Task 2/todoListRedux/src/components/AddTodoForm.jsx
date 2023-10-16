@@ -36,12 +36,12 @@ const AddTodoForm = () => {
     <form onSubmit={onSubmit} className="form-inline mt-3 mb-3">
       <h4>Add Todo to list</h4>
       <input
+        className="form-control mb-2 mr-sm-2"
+        onChange={(event) => setValue(event.target.value)}
+        placeholder="Add todo"
         ref={inputRef}
         type="text"
-        className="form-control mb-2 mr-sm-2"
-        placeholder="Add todo"
         value={value}
-        onChange={(event) => setValue(event.target.value)}
       ></input>
 
       {/* Only show create button if we have a todo to add */}

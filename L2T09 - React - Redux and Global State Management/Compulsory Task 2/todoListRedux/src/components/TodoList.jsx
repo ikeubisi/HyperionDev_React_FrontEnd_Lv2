@@ -9,10 +9,10 @@ const TodoList = () => {
     <ul className="list-group">
       {todos.map((todo) => (
         <TodoItem
-          key={todo.id}
-          id={todo.id}
-          content={todo.content}
           completed={todo.completed}
+          content={todo.content}
+          id={todo.id}
+          key={todo.id}
         />
       )) || <h3>Loading ...</h3>}
     </ul>
