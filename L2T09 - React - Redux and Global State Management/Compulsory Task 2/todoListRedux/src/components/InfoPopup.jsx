@@ -1,7 +1,7 @@
 const InfoPopup = () => {
   return (
     <>
-      {/* Learned about Boostrap Modals from Learn Bootstrap: A Step-by-Step
+      {/* Learned about Bootstrap Modals from Learn Bootstrap: A Step-by-Step
       Tutorial v5.3 (2023) YouTube. Available at:
       https://www.youtube.com/watch?v=MTRHi0gxPEo (Accessed: 19 September 2023).
 

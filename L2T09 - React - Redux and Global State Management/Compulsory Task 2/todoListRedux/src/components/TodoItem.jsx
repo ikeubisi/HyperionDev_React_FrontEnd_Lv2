@@ -6,12 +6,12 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
 const TodoItem = ({ id, content, completed }) => {
-  // React Bootstrap Modal content
+  const dispatch = useDispatch();
+
+  // React Bootstrap Modal values
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
-  const dispatch = useDispatch();
 
   // Todo item editing learned from
   // Redux crud tutorial in react - redux toolkit tutorial (2022) YouTube.

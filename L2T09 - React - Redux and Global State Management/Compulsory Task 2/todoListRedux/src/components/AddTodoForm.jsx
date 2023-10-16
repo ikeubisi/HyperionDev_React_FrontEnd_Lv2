@@ -1,6 +1,5 @@
 import { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
-// Where all the Add, Edit, Delete, Completed actions are
 import { addTodo } from "../store/todoSlice";
 
 const AddTodoForm = () => {
@@ -14,6 +13,7 @@ const AddTodoForm = () => {
   const onSubmit = (event) => {
     event.preventDefault();
 
+    // Forbid entry of empty todos
     if (inputRef.current.value.length > 0) {
       dispatch(
         addTodo({
