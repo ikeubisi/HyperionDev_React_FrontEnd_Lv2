@@ -43,6 +43,14 @@ const InfoPopup = () => {
               >
                 Show More Info <i className="fa-solid fa-arrow-right fa-sm"></i>
               </button>
+              <button
+                aria-label="Close"
+                className="btn btn-secondary"
+                data-bs-dismiss="modal"
+                type="button"
+              >
+                Close <i className="fa-solid fa-x fa-sm"></i>
+              </button>
             </div>
           </div>
         </div>
@@ -86,6 +94,14 @@ const InfoPopup = () => {
               >
                 Back To Main Info{" "}
                 <i className="fa-solid fa-arrow-left fa-sm"></i>
+              </button>
+              <button
+                aria-label="Close"
+                className="btn btn-secondary"
+                data-bs-dismiss="modal"
+                type="button"
+              >
+                Close <i className="fa-solid fa-x fa-sm"></i>
               </button>
             </div>
           </div>
