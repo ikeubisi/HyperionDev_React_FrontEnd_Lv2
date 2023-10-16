@@ -50,9 +50,12 @@ const TodoItem = ({ id, content, completed }) => {
         {content}
 
         {/* Edit modal */}
-        <Button variant="warning" onClick={handleShow}>
-          Edit Todo
-        </Button>
+        {/* Edit button only available if todo is not completed */}
+        {completed === false && (
+          <Button variant="warning" onClick={handleShow}>
+            Edit Todo
+          </Button>
+        )}
 
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
