@@ -26,7 +26,7 @@ const AddTodoForm = () => {
         })
       );
     } else {
-      alert("You cannot have an empty todo");
+      return <h3 className="danger">You cannot have an empty todo!</h3>;
     }
 
     inputRef.current.value = "";
