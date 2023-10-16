@@ -7,3 +7,11 @@ h3 {
 .todo-content {
   max-width: 900px;
 }
+
+.todoCounter {
+  background-color: hsl(0, 14%, 89%);
+  padding: 5px;
+  border-radius: 5px;
+  max-width: 400px;
+  margin: auto;
+}
