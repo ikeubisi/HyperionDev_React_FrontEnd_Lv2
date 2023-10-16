@@ -84,7 +84,7 @@ const TodoItem = ({ completed, content, id }) => {
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={handleClose} variant="secondary">
-              Close
+              Close <i className="fa-solid fa-x fa-sm"></i>
             </Button>
           </Modal.Footer>
         </Modal>
