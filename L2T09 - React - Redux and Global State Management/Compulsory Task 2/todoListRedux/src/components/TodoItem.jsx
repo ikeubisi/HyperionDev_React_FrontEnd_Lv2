@@ -57,6 +57,7 @@ const TodoItem = ({ id, content, completed }) => {
           </Button>
         )}
 
+        {/* React Boostrap modal, not putting it in its own component since the code gets very messy with props */}
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>Edit Todo</Modal.Title>
