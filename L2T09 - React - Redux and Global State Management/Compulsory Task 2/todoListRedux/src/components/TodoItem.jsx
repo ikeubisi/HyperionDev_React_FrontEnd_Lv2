@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
 import { toggleComplete, deleteTodo, editTodo } from "../store/todoSlice";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
@@ -11,7 +11,6 @@ const TodoItem = ({ id, content, completed }) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const inputContentRef = useRef(null);
   const dispatch = useDispatch();
 
   // Todo item editing learned from
@@ -65,7 +64,6 @@ const TodoItem = ({ id, content, completed }) => {
           </Modal.Header>
           <Modal.Body>
             <input
-              ref={inputContentRef}
               type="text"
               onChange={(event) => {
                 setEditedTodo(event.target.value);
