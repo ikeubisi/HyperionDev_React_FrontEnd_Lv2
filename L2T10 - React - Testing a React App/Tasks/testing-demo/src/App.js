@@ -1,6 +1,5 @@
-import { useState } from "react";
-
-const App = () => {
+import React, { useState } from "react";
+function App() {
   const [count, setCount] = useState(0);
   const buttonStyle = {
     backgroundColor: "lightblue",
@@ -10,7 +9,6 @@ const App = () => {
     cursor: "pointer",
     fontSize: "1rem",
   };
-
   return (
     <div style={{ textAlign: "center", padding: "50px" }}>
       <h1>Simple Counter App</h1>
@@ -26,6 +24,5 @@ const App = () => {
       </button>
     </div>
   );
-};
-
+}
 export default App;
