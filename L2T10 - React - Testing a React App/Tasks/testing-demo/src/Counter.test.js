@@ -1,17 +1,17 @@
-import { render, fireEvent } from "@testing-library/react";
+import { render, fireEvent, screen } from "@testing-library/react";
 import App from "./App";
 
 test("increments the count", () => {
-  const { getByText } = render(<App />);
-  const incrementButton = getByText("Increment");
+  render(<App />);
+  const incrementButton = screen.getByText("Increment");
   fireEvent.click(incrementButton);
-  expect(getByText("Count: 1")).toBeInTheDocument();
+  expect(screen.getByText("Count: 1")).toBeInTheDocument();
 });
 
-// Once it has been increased by 1 decrement to 0
+// On test reload after the increment test we start at a Count of 0 and then hit -1
 test("decrements the count", () => {
-  const { getByText } = render(<App />);
-  const decrementButton = getByText("Decrement");
+  render(<App />);
+  const decrementButton = screen.getByText("Decrement");
   fireEvent.click(decrementButton);
-  expect(getByText("Count: -1")).toBeInTheDocument();
+  expect(screen.getByText("Count: -1")).toBeInTheDocument();
 });
