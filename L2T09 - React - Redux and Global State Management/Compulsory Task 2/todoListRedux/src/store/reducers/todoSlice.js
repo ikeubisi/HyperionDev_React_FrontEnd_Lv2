@@ -20,7 +20,7 @@ const todoSlice = createSlice({
         content: action.payload.content,
         completed: false,
       };
-      state.push(newTodo);
+      return [...state, newTodo];
     },
 
     // Delete Todo
