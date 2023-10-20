@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
+import Swal from "sweetalert2";
 import { addTodo } from "../store/todoSlice";
 
 const AddTodoForm = () => {
@@ -26,7 +27,16 @@ const AddTodoForm = () => {
         })
       );
     } else {
-      return <h3 className="danger">You cannot have an empty todo!</h3>;
+      // Use Sweetalert2 Library instead of browser based alert() to create a customizable popup
+      Swal.fire({
+        title: "<strong>Error!</strong>",
+        text: "Please provide a todo before clicking 'Add Todo' ",
+        footer: "<i>Good luck with your list!</i>",
+        icon: "error",
+        iconColor: "red",
+        confirmButtonText: "Understood! <i class='fa fa-thumbs-up'></i>",
+      });
+      return;
     }
 
     inputRef.current.value = "";
