@@ -3,7 +3,11 @@ import Modal from "react-bootstrap/Modal";
 import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
-import { deleteTodo, editTodo, toggleComplete } from "../store/todoSlice";
+import {
+  deleteTodo,
+  editTodo,
+  toggleComplete,
+} from "../store/reducers/todoSlice";
 
 const TodoItem = ({ completed, content, id }) => {
   const dispatch = useDispatch();

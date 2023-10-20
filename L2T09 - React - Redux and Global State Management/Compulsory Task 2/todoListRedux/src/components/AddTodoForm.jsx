@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import Swal from "sweetalert2";
-import { addTodo } from "../store/todoSlice";
+import { addTodo } from "../store/reducers/todoSlice";
 
 const AddTodoForm = () => {
   const [value, setValue] = useState("");
