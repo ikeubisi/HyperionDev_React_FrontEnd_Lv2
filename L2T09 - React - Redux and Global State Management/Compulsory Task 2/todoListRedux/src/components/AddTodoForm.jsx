@@ -28,6 +28,9 @@ const AddTodoForm = () => {
       );
     } else {
       // Use Sweetalert2 Library instead of browser based alert() to create a customizable popup
+      // Custom popup examples learned from
+      // SWEETALERT2 (no date) SweetAlert2.
+      // Available at: https://sweetalert2.github.io/#examples (Accessed: 20 October 2023).
       Swal.fire({
         title: "<strong>Error!</strong>",
         text: "Please provide a todo before clicking 'Add Todo' ",
