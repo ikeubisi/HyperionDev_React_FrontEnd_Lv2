@@ -1,7 +1,11 @@
 const ShippingHelpInfo = () => {
   return (
     <>
-      {/* Bootstrap modal with helpful info on Shipping costs & terms of service */}
+      {/* Bootstrap modal with helpful info on Shipping costs & terms of service 
+      has option to show more info.
+
+      First only shows a button then modal appears when clicked on
+      */}
       <div
         aria-hidden="true"
         aria-labelledby="exampleModalToggleLabel"
@@ -9,6 +13,7 @@ const ShippingHelpInfo = () => {
         tabIndex="-1"
         className="modal fade"
       >
+        {/* Main info section */}
         <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content">
             <div className="modal-header">
@@ -62,6 +67,7 @@ const ShippingHelpInfo = () => {
         aria-labelledby="exampleModalToggleLabel2"
         tabIndex="-1"
       >
+        {/* More Info Section */}
         <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content">
             <div className="modal-header">
@@ -109,6 +115,7 @@ const ShippingHelpInfo = () => {
           </div>
         </div>
       </div>
+      {/* Button that shows the modal */}
       <div className="interests-btn-container mb-4">
         <a
           data-bs-toggle="modal"

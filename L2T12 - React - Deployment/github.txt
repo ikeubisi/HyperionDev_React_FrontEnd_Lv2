@@ -1,4 +1,4 @@
-Sorry I previously already been pushing my projects to github using GitKraken which uses SSH
+Sorry I had previously already been pushing my projects to github using GitKraken which uses SSH
 
 So I had to create a brand new project to show I was pushing via a token for authentication
 https://github.com/markpackham/HyperionDevDeploymentDemo
