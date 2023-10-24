@@ -74,6 +74,14 @@ npm i
 npm run dev
 ```
 
+Or
+
+```
+npm start
+```
+
+
+
 ## Build & Deploy
 
 ```
